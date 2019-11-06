@@ -1,5 +1,5 @@
 # human-pose-synthesis
-This repo implements Unsupervised Person Image Generation with Semantic Parsing Transformation and uses codes from [link].(https://github.com/SijieSong/person_generation_spt)
+This repo implements Unsupervised Person Image Generation with Semantic Parsing Transformation and uses codes from this [repo](https://github.com/SijieSong/person_generation_spt).
 
 ### Unsupervised Person Image Generation with Semantic Parsing Transformation <br>(CVPR 2019, oral).
 Reference
