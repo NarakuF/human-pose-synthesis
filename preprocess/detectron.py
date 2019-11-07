@@ -1,5 +1,7 @@
 # The detectron code is done in colab
 # Below is the code snippet
+# In order to run the code successfully, user need to install all its dependency and its github module
+# Detailed dependency and implementation can be found here: https://github.com/facebookresearch/detectron2
 
 # !pip install git+https://github.com/facebookresearch/fvcore.git
 # !git clone https://github.com/facebookresearch/detectron2 detectron2_repo
@@ -20,7 +22,7 @@ from detectron2.config import get_cfg
 from detectron2.utils.visualizer import Visualizer
 from detectron2.data import MetadataCatalog
 
-
+# Input path that need to specify
 img_file = ''
 im = cv2.imread(img_file)
 cv2_imshow(im)
