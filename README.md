@@ -15,3 +15,4 @@ Unsupervised Person Image Generation with Semantic Parsing Transformation (CVPR 
 
 * [person_generation_spt](<https://github.com/SijieSong/person_generation_spt>)
 * [OpenPose](<https://github.com/CMU-Perceptual-Computing-Lab/openpose>)
+* [Detectron2](<https://github.com/facebookresearch/detectron2>)
