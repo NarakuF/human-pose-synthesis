@@ -1,6 +1,19 @@
 # human-pose-synthesis
 
-This repo implements Unsupervised Person Image Generation with Semantic Parsing Transformation and uses codes from this [repo](<https://github.com/SijieSong/person_generation_spt>).
+This repo implements Unsupervised Person Image Generation with Semantic Parsing Transformation and uses and modifies codes from this [repo](<https://github.com/SijieSong/person_generation_spt>).
+
+### Requrements
+Install all dependencies in `requrements.txt`.
+
+### Content
+* `data`: define the data leader for the model.
+* `model`: define the main model.
+* `options`: command line arguments.
+* `preprocess`: preprocess the data, obtains the keypoints information.
+* `results`: the demo output images.
+* `scripts`: bash script to execute the test demo.
+* `util`: utilities to get the poses and pose masks.
+* `test_demo.py`: for demo.
 
 ### Reference
 
