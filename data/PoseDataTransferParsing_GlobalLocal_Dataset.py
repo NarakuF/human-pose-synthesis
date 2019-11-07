@@ -32,18 +32,25 @@ class PoseDataset(BaseDataset):
         if self.opt.isTrain:
             f_A = open('./data/train_A_parsing.txt','r')
             f_B = open('./data/train_B_parsing.txt','r')
-            # self.A_paths = [_.split('\r\n')[0] for _ in f_A.readlines()]
-            # self.B_paths = [_.split('\r\n')[0] for _ in f_B.readlines()]
+            self.A_paths = [_.split('\n')[0] for _ in f_A.readlines()]
+            self.B_paths = [_.split('\n')[0] for _ in f_B.readlines()]
             f_A.close()
             f_B.close()
 
         else:
-            f_A = open('./data/test_A_example.txt', 'r')
-            f_B = open('./data/test_B_example.txt', 'r')
-            # self.A_paths = [_.split('\r\n')[0] for _ in f_A.readlines()]
-            # self.B_paths = [_.split('\r\n')[0] for _ in f_B.readlines()]
-            f_A.close()
-            f_B.close()
+            # no reverse
+            fn_a = './data/test_A_example.txt'
+            fn_b = './data/test_B_example.txt'
+
+            with open(fn_a, 'r') as f_A:
+                self.A_paths = []
+                for l in f_A:
+                    self.A_paths.append(l.strip())
+
+            with open(fn_b, 'r') as f_B:
+                self.B_paths = []
+                for l in f_B:
+                    self.B_paths.append(l.strip())
 
         self.A_size = len(self.A_paths)
         self.B_size = len(self.B_paths)

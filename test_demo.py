@@ -1,5 +1,6 @@
 import os
-import numpy
+import numpy as np
+import torch
 from options.test_pose_options import TestPoseOptions
 from data import CreateDataLoader
 from models import create_model
@@ -9,15 +10,15 @@ from skimage.transform import resize as imresize
 
 
 def deprocess_image(img):
-    return (255 * ((img + 1) / 2.0)).astype(numpy.uint8)
+    return (255 * ((img + 1) / 2.0)).astype(np.uint8)
 
 
 if __name__ == '__main__':
-    print(1)
+    # Reproducibility
+    torch.manual_seed(0)
+    np.random.seed(0)
+
     opt = TestPoseOptions().parse()
-
-    opt.how_many = 6
-
     opt.nThreads = 1  # test code only supports nThreads = 1
     opt.batchSize = 1  # test code only supports batchSize = 1
     opt.serial_batches = True  ##### randomly choose the target pose ####
@@ -44,11 +45,11 @@ if __name__ == '__main__':
 
         fake_B = model.fake_B.cpu().numpy()
         fake_B = fake_B[0]
-        fake_B = numpy.transpose(fake_B, (1, 2, 0))
+        fake_B = np.transpose(fake_B, (1, 2, 0))
 
         fake_A = model.fake_A.cpu().numpy()
         fake_A = fake_A[0]
-        fake_A = numpy.transpose(fake_A, (1, 2, 0))
+        fake_A = np.transpose(fake_A, (1, 2, 0))
         img_A_path = model.image_A_paths[0]
         img_B_path = model.image_B_paths[0]
 
@@ -56,6 +57,9 @@ if __name__ == '__main__':
 
         A = imread(img_A_path)
         B = imread(img_B_path)
+
+        print('Fake A min {} max {}'.format(fake_A.min(), fake_A.max()))
+        print('Fake B min {} max {}'.format(fake_B.min(), fake_B.max()))
 
         fake_A = deprocess_image(fake_A)
         fake_B = deprocess_image(fake_B)
@@ -65,4 +69,4 @@ if __name__ == '__main__':
 
         imname = os.path.join(opt.results_dir, A_name + '_' + B_name + '.png')
 
-        imsave(imname, numpy.concatenate((A, B, fake_B), axis=1))
+        imsave(imname, np.concatenate((A, B, fake_A, fake_B), axis=1))

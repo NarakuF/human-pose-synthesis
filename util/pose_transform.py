@@ -34,9 +34,9 @@ class AffineLayer(nn.Module):
 
         # note that the transforms are the inverse transforms, from output to input
         # similar to the tensorflow tf.contrib.image.transform api
-        grid = F.affine_grid(transforms, input.shape)
+        grid = F.affine_grid(transforms, input.shape, align_corners=False)
 
-        warped_map = F.grid_sample(input,grid)
+        warped_map = F.grid_sample(input,grid, align_corners=False)
 
         warped_map = warped_map.view(-1,num_transforms,C,H,W)
         # batch x transform x channel x h x w
