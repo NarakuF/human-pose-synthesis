@@ -6,14 +6,8 @@ This repo implements Unsupervised Person Image Generation with Semantic Parsing 
 Install all dependencies in `requrements.txt`.
 
 ### Content
-* `data`: define the data leader for the model.
-* `model`: define the main model.
-* `options`: command line arguments.
+* `person_generation`: use per-trained model to generate pose-guided human synthesis images.
 * `preprocess`: preprocess the data, obtains the keypoints information.
-* `results`: the demo output images.
-* `scripts`: bash script to execute the test demo.
-* `util`: utilities to get the poses and pose masks.
-* `test_demo.py`: for demo.
 
 ### Reference
 
