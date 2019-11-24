@@ -1,4 +1,5 @@
 from skimage import io, transform
+import numpy as np
 
 class Rescale(object):
     def __init__(self, output_size):
