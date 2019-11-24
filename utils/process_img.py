@@ -1,5 +1,6 @@
 from skimage import io, transform
 import numpy as np
+import torch
 
 class Rescale(object):
     def __init__(self, output_size):
