@@ -1,4 +1,6 @@
+import os
 import cv2
+import pickle
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -16,18 +18,31 @@ from skimage import io, transform
 from utils.process_img import Rescale, DynamicCrop, ToTensor
 from utils.process_text import tokenizer, get_embeddings, get_word2idx
 
+TEXT_FEATURE = './intermediate/text_feature.pk'
 
 class PoseDataset(Dataset):
-    def __init__(self, csv_file, root_dir, transform = None):
+    def __init__(self, csv_file, root_dir, transform = None, brand_new = False):
         self.data_list = pd.read_csv(csv_file)
         self.root_dir = root_dir
         self.transform = transform
+
         # Parsing text:
-        annotation_list = list(self.data_list['annotate'])
-        self.word2idx, self.annotations, wv = get_word2idx(annotation_list)
-        self.embeddings = get_embeddings(self.word2idx, wv)
-        self.padded_annotate = nn.utils.rnn.pad_sequence([torch.tensor([self.word2idx[word] if word in self.word2idx else self.word2idx['<unk>'] for word in
-                                                 tokens]) for tokens in self.annotations])
+        if brand_new or not os.path.exists(TEXT_FEATURE):
+            annotation_list = list(self.data_list['annotate'])
+            self.word2idx, self.annotations, wv = get_word2idx(annotation_list)
+            self.embeddings = get_embeddings(self.word2idx, wv)
+            self.padded_annotate = nn.utils.rnn.pad_sequence([torch.tensor([self.word2idx[word] if word in self.word2idx else self.word2idx['<unk>'] for word in
+                                                     tokens]) for tokens in self.annotations])
+            save_file = {'word2idx': self.word2idx, 'embeddings': self.embeddings, 'padded_annotate': self.padded_annotate}
+            with open(TEXT_FEATURE, 'wb') as f:
+                pickle.dump(save_file, f)
+        else:
+            with open(TEXT_FEATURE, 'rb') as f:
+                save_file = pickle.load(f)
+            self.word2idx = save_file['word2idx']
+            self.embeddings = save_file['embeddings']
+            self.padded_annotate = save_file['padded_annotate']
+
 
     def __len__(self):
         return self.data_list.shape[0]
