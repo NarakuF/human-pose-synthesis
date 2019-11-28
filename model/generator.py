@@ -13,9 +13,9 @@ def create_emb_layer(embeddings, non_trainable=False):
     return emb_layer
 
 
-class Generator(nn.Module):
+class PoseGenerator(nn.Module):
     def __init__(self, embeddings):
-        super(Generator, self).__init__()
+        super(PoseGenerator, self).__init__()
         self.hidden_size = 64 # output encoded annotation size
         self.noise_size = 64 # 初始的image size
         self.emb_layer = create_emb_layer(embeddings, non_trainable=True)
@@ -53,9 +53,8 @@ class Generator(nn.Module):
             # state size. (nc) x 128 x 128
         )
         
-    def forward(self, noise, data):
+    def forward(self, noise, annotate):
         # Get the encoded annotation from RNN
-        annotate = data['annotate'].cuda()
         embed_annotate = self.emb_layer(annotate)
         x, hidden = self.rnn(embed_annotate)
         encoded_annotate = torch.reshape(x[:,-1,:], (-1, x[:,-1,:].shape[1], 1, 1))

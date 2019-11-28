@@ -13,9 +13,9 @@ def create_emb_layer(embeddings, non_trainable=False):
     return emb_layer
 
 
-class Discriminator(nn.Module):
+class PoseDiscriminator(nn.Module):
     def __init__(self, embeddings):
-        super(Discriminator, self).__init__()
+        super(PoseDiscriminator, self).__init__()
         self.hidden_size = 64 # output encoded annotation size
         self.image_size = 256 # input image size before going through CNN
         self.output_size = 64 # output image representation size after going through CNN
@@ -48,8 +48,8 @@ class Discriminator(nn.Module):
         self.fc = nn.Linear(self.output_size+self.hidden_size, 1)
         self.sigmoid = nn.Sigmoid()
 
-    def forward(self, image, data):
-        annotate = data['annotate'].cuda()
+    def forward(self, image, annotate):
+        batch_size = annotate.shape[0]
         embed_annotate = self.emb_layer(annotate)
         x, hidden = self.rnn(embed_annotate)
         
@@ -57,9 +57,8 @@ class Discriminator(nn.Module):
         encoded_img = self.main(image)
         
         # *最后一层fully connected layer的input (concatenate encoded_annotate and encoded_img) 
-        print(encoded_img.shape, encoded_annotate.shape)  
         input_x = torch.cat((encoded_img, encoded_annotate), 1)
-        input_x = input_x.view(4, -1)
+        input_x = input_x.view(batch_size, -1)
 
         decision = self.sigmoid(self.fc(input_x))
         return decision
