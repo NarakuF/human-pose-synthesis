@@ -46,10 +46,20 @@ class DynamicCrop(object):
             left, right = min(min(col),left), max(max(col),right)        
 
         new_h, new_w = down-up, right-left
-        new_up = max(0, up - self.padding)
-        new_down = min(h, new_up + new_h + 2*self.padding)
-        new_left = max(0, left - self.padding)
-        new_right = min(w, new_left + new_w + 2*self.padding)
+        if new_h > new_w:
+            padding_h = self.padding
+            padding_w = self.padding + (new_h-new_w)//2
+        else:
+            padding_w = self.padding
+            padding_h = self.padding + (new_w-new_h)//2
+
+        new_up = max(0, up - padding_h)
+        new_down = min(h, new_up + new_h + 2*padding_h)
+        new_left = max(0, left - padding_w)
+        new_right = min(w, new_left + new_w + 2*padding_w)
+        new_h = new_down - new_up
+        new_w = new_right - new_left
+
         img = img[new_up:new_down, new_left:new_right]
         raw = raw[new_up:new_down, new_left:new_right]
         parsing = parsing[new_up:new_down, new_left:new_right]
