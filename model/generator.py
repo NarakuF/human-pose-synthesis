@@ -12,20 +12,23 @@ def create_emb_layer(embeddings, non_trainable=False):
         emb_layer.weight.requires_grad = False
     return emb_layer
 
-    
-ngf = 64
+
 class Generator(nn.Module):
     def __init__(self, embeddings):
         super(Generator, self).__init__()
+        self.hidden_size = 64 # output encoded annotation size
+        self.noise_size = 64 # 初始的image size
         self.emb_layer = create_emb_layer(embeddings, non_trainable=True)
         self.rnn = nn.GRU(input_size = embeddings.size()[1], 
-                          hidden_size = 64, 
+                          hidden_size = self.hidden_size, 
                           num_layers = 2,
                           batch_first = True)
-        
+
+        ngf = 64 # number of feature for the image
+        in_feature_size = self.hidden_size + self.noise_size
         self.main = nn.Sequential(
             # input is Z, going into a convolution
-            nn.ConvTranspose2d(64, ngf * 8, 4, 1, 0, bias=False),
+            nn.ConvTranspose2d(in_feature_size, ngf * 8, 4, 1, 0, bias=False),
             nn.BatchNorm2d(ngf * 8),
             nn.ReLU(True),
             # state size. (ngf*8) x 4 x 4
@@ -46,9 +49,12 @@ class Generator(nn.Module):
             # state size. (nc) x 64 x 64
         )
         
-    def forward(self, data):
-        x = data['annotate']
-        x = self.emb_layer(x)
-        x, hidden = self.rnn(x)
-        decoded_x = torch.reshape(x[:,-1,:], (-1, x[:,-1,:].shape[1], 1, 1))
-        return self.main(decoded_x)
+    def forward(self, noise, data):
+        # Get the encoded annotation from RNN
+        annotate = data['annotate'].cuda()
+        embed_annotate = self.emb_layer(annotate)
+        x, hidden = self.rnn(embed_annotate)
+        encoded_annotate = torch.reshape(x[:,-1,:], (-1, x[:,-1,:].shape[1], 1, 1))
+        # Generator的input: concatenate noise + annotation
+        input_x = torch.cat((encoded_annotate, noise), 1)
+        return self.main(input_x)
