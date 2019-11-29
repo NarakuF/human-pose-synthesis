@@ -6,7 +6,7 @@ from nltk.tokenize import punkt
 import torch
 import numpy as np
 
-WORD2VEC_PATH = '~/Desktop/coms_4995/human-pose-synthesis/data/GoogleNews-vectors-negative300.bin'
+WORD2VEC_PATH = 'd:/data/GoogleNews-vectors-negative300.bin'
 
 
 def tokenizer(doc):
