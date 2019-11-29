@@ -7,8 +7,7 @@ from utils import process_text
 
 
 def generator(vocab, bigram_vocab, max_len=10):
-    #vocab = vocab.union(bigram_vocab)
-    vocab = bigram_vocab
+    vocab = vocab.union(bigram_vocab)
     vocab = list(vocab)
     n = random.randint(1, max_len)
     res = []
