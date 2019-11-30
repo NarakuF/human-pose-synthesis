@@ -20,10 +20,10 @@ class PoseGeneratorDC(nn.Module):
         self.hidden_size = 64 # output encoded annotation size
         self.noise_size = 64 # 初始的image size
         self.emb_layer = create_emb_layer(embeddings, non_trainable=True)
-        self.rnn = nn.GRU(input_size = embeddings.size()[1], 
-                          hidden_size = self.hidden_size, 
-                          num_layers = 2,
-                          batch_first = True)
+        self.rnn = nn.LSTM(input_size = embeddings.size()[1], 
+                           hidden_size = self.hidden_size, 
+                           num_layers = 2,
+                           batch_first = True)
 
         ngf = 128 # number of feature for the image
         in_feature_size = self.hidden_size + self.noise_size
@@ -119,3 +119,37 @@ class PoseGeneratorL(nn.Module):
         return img
 
 
+
+
+class Generator(nn.Module):
+    def __init__(self):
+        super(Generator, self).__init__()
+        self.main = nn.Sequential(
+            # input is Z, going into a convolution
+            nn.ConvTranspose2d( nz, ngf * 16, 4, 1, 0, bias=False),
+            nn.BatchNorm2d(ngf * 16),
+            nn.ReLU(True),
+            # state size. (ngf*8) x 4 x 4
+            nn.ConvTranspose2d( ngf * 16, ngf * 8, 4, 2, 1, bias=False),
+            nn.BatchNorm2d(ngf * 8),
+            nn.ReLU(True),
+            # state size. (ngf*8) x 4 x 4
+            nn.ConvTranspose2d(ngf * 8, ngf * 4, 4, 2, 1, bias=False),
+            nn.BatchNorm2d(ngf * 4),
+            nn.ReLU(True),
+            # state size. (ngf*4) x 8 x 8
+            nn.ConvTranspose2d( ngf * 4, ngf * 2, 4, 2, 1, bias=False),
+            nn.BatchNorm2d(ngf * 2),
+            nn.ReLU(True),
+            # state size. (ngf*2) x 16 x 16
+            nn.ConvTranspose2d( ngf * 2, ngf, 4, 2, 1, bias=False),
+            nn.BatchNorm2d(ngf),
+            nn.ReLU(True),
+            # state size. (ngf) x 32 x 32
+            nn.ConvTranspose2d( ngf, nc, 4, 2, 1, bias=False),
+            nn.Tanh()
+            # state size. (nc) x 64 x 64
+        )
+
+    def forward(self, input):
+        return self.main(input)
