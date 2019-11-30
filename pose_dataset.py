@@ -33,12 +33,13 @@ class PoseDataset(Dataset):
             self.embeddings = get_embeddings(self.word2idx, wv)
             self.padded_annotate = nn.utils.rnn.pad_sequence([torch.tensor([self.word2idx[word] if word in self.word2idx else self.word2idx['<unk>'] for word in
                                                      tokens]) for tokens in self.annotations])
-            save_file = {'word2idx': self.word2idx, 'embeddings': self.embeddings, 'padded_annotate': self.padded_annotate}
+            save_file = {'annotations': self.annotations, 'word2idx': self.word2idx, 'embeddings': self.embeddings, 'padded_annotate': self.padded_annotate}
             with open(TEXT_FEATURE, 'wb') as f:
                 pickle.dump(save_file, f)
         else:
             with open(TEXT_FEATURE, 'rb') as f:
                 save_file = pickle.load(f)
+            self.annotations = save_file['annotations']
             self.word2idx = save_file['word2idx']
             self.embeddings = save_file['embeddings']
             self.padded_annotate = save_file['padded_annotate']

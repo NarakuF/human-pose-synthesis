@@ -13,17 +13,17 @@ def create_emb_layer(embeddings, non_trainable=False):
     return emb_layer
 
 
-class PoseDiscriminator(nn.Module):
+class PoseDiscriminatorDC(nn.Module):
     def __init__(self, embeddings):
-        super(PoseDiscriminator, self).__init__()
+        super(PoseDiscriminatorDC, self).__init__()
         self.hidden_size = 64 # output encoded annotation size
         self.image_size = 256 # input image size before going through CNN
         self.output_size = 64 # output image representation size after going through CNN
         self.emb_layer = create_emb_layer(embeddings, non_trainable=True)
-        self.rnn = nn.GRU(input_size = embeddings.size()[1], 
-                          hidden_size = self.hidden_size, 
-                          num_layers = 2,
-                          batch_first = True)
+        # self.rnn = nn.GRU(input_size = embeddings.size()[1], 
+        #                   hidden_size = self.hidden_size, 
+        #                   num_layers = 2,
+        #                   batch_first = True)
         ndf = 128
         self.main = nn.Sequential(
             # input is (nc=3) x 64 x 64
@@ -45,20 +45,41 @@ class PoseDiscriminator(nn.Module):
             nn.Conv2d(ndf * 16, self.output_size, 4, 1, 0, bias=False),
             nn.BatchNorm2d(self.output_size)
         )
-        self.fc = nn.Linear(self.output_size+self.hidden_size, 1)
+        # self.main = models.resnet18(pretrained=True)
+        self.fc_1 = nn.Linear(self.output_size, 128)
+        self.norm_1 = nn.BatchNorm1d(128)
+        self.fc_2 = nn.Linear(128, 64)
+        self.norm_2 = nn.BatchNorm1d(64)
+        self.fc_3 = nn.Linear(64, 1)
         self.sigmoid = nn.Sigmoid()
 
     def forward(self, image, annotate):
-        batch_size = annotate.shape[0]
-        embed_annotate = self.emb_layer(annotate)
-        x, hidden = self.rnn(embed_annotate)
+        # batch_size = annotate.shape[0]
+        # embed_annotate = self.emb_layer(annotate)
+        # x, hidden = self.rnn(embed_annotate)
         
-        encoded_annotate = torch.reshape(x[:,-1,:], (-1, x[:,-1,:].shape[1], 1, 1))
-        encoded_img = self.main(image)
-        
-        # *最后一层fully connected layer的input (concatenate encoded_annotate and encoded_img) 
-        input_x = torch.cat((encoded_img, encoded_annotate), 1)
-        input_x = input_x.view(batch_size, -1)
+        # encoded_annotate = torch.reshape(x[:,-1,:], (-1, x[:,-1,:].shape[1], 1, 1))
 
-        decision = self.sigmoid(self.fc(input_x))
-        return decision
+        # encoded_img = self.main(image)
+        
+        # # *最后一层fully connected layer的input (concatenate encoded_annotate and encoded_img) 
+        # #input_x = torch.cat((encoded_img, encoded_annotate), 1)
+        # input_x = encoded_img
+        # input_x = input_x.view(batch_size, -1)
+
+        # x = F.relu(self.norm_1(self.fc_1(input_x)))
+        # x = F.relu(self.norm_2(self.fc_2(x)))
+        # x = self.sigmoid(self.fc_3(x))
+
+        # #decision = self.sigmoid(self.fc(input_x))
+
+        batch_size = image.shape[0]
+
+        x = self.main(image)
+        x = x.view(batch_size, -1)
+
+        x = F.relu(self.norm_1(self.fc_1(x)))
+        x = F.relu(self.norm_2(self.fc_2(x)))
+        x = self.sigmoid(self.fc_3(x))
+
+        return x
