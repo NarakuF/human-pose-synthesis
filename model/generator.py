@@ -64,8 +64,8 @@ class PoseGeneratorDC(nn.Module):
         encoded_x = x[:,0,:]+x[:,-1,:]
         #print(encoded_x.shape)
         encoded_annotate = torch.reshape(encoded_x, (-1, encoded_x.shape[1], 1, 1))
-        print(annotate.view(-1, annotate.shape[1]))
-        print(encoded_annotate.view(-1, encoded_x.shape[1]))
+        #print(annotate.view(-1, annotate.shape[1]))
+        #print(encoded_annotate.view(-1, encoded_x.shape[1]))
         # Generator的input: concatenate noise + annotation
         input_x = torch.cat((encoded_annotate, noise), 1)
         return self.main(input_x)
