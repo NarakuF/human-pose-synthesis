@@ -17,41 +17,43 @@ def create_emb_layer(embeddings, non_trainable=False):
 class PoseGeneratorDC(nn.Module):
     def __init__(self, embeddings):
         super(PoseGeneratorDC, self).__init__()
-        self.hidden_size = 64 # output encoded annotation size
-        self.noise_size = 64 # 初始的image size
+        self.annotate_embed_size = 64 	# output encoded annotation size
+        self.z_size = 64 				# 初始的noise size
         self.emb_layer = create_emb_layer(embeddings, non_trainable=True)
         self.rnn = nn.LSTM(input_size = embeddings.size()[1], 
-                           hidden_size = self.hidden_size, 
+                           hidden_size = self.annotate_embed_size, 
                            num_layers = 2,
                            batch_first = True)
 
-        ngf = 128 # number of feature for the image
-        in_feature_size = self.hidden_size + self.noise_size
+        ngf = 64						 # number of feature for the image
+        nc = 3
+        in_feature_size = self.annotate_embed_size + self.z_size
+
         self.main = nn.Sequential(
             # input is Z, going into a convolution
-            nn.ConvTranspose2d(in_feature_size, ngf * 16, 4, 1, 0, bias=False),
+            nn.ConvTranspose2d( in_feature_size, ngf * 16, 4, 1, 0, bias=False),
             nn.BatchNorm2d(ngf * 16),
             nn.ReLU(True),
-            # state size. (ngf*16) x 4 x 4
-            nn.ConvTranspose2d(ngf * 16, ngf * 8, 4, 2, 1, bias=False),
+            # state size. (ngf*8) x 4 x 4
+            nn.ConvTranspose2d( ngf * 16, ngf * 8, 4, 2, 1, bias=False),
             nn.BatchNorm2d(ngf * 8),
             nn.ReLU(True),
-            # state size. (ngf*8) x 8 x 8
+            # state size. (ngf*8) x 4 x 4
             nn.ConvTranspose2d(ngf * 8, ngf * 4, 4, 2, 1, bias=False),
             nn.BatchNorm2d(ngf * 4),
             nn.ReLU(True),
-            # state size. (ngf*4) x 16 x 16
+            # state size. (ngf*4) x 8 x 8
             nn.ConvTranspose2d( ngf * 4, ngf * 2, 4, 2, 1, bias=False),
             nn.BatchNorm2d(ngf * 2),
             nn.ReLU(True),
-            # state size. (ngf*2) x 32 x 32
+            # state size. (ngf*2) x 16 x 16
             nn.ConvTranspose2d( ngf * 2, ngf, 4, 2, 1, bias=False),
             nn.BatchNorm2d(ngf),
             nn.ReLU(True),
-            # state size. (ngf) x 64 x 64
-            nn.ConvTranspose2d( ngf, 3, 4, 2, 1, bias=False),
+            # state size. (ngf) x 32 x 32
+            nn.ConvTranspose2d( ngf, nc, 4, 2, 1, bias=False),
             nn.Tanh()
-            # state size. (nc) x 128 x 128
+            # state size. (nc) x 64 x 64
         )
         
     def forward(self, noise, annotate):
@@ -117,7 +119,6 @@ class PoseGeneratorL(nn.Module):
 
 
         return img
-
 
 
 
