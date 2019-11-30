@@ -2,6 +2,7 @@ import torch
 import torchvision
 import torch.nn as nn
 import torch.nn.functional as F
+from torchvision import models
 
 
 def create_emb_layer(embeddings, non_trainable=False):
@@ -47,7 +48,7 @@ class PoseDiscriminatorDC(nn.Module):
             nn.BatchNorm2d(ndf * 16),
             nn.LeakyReLU(0.2, inplace=True),
             # state size. (ndf*8) x 4 x 4
-            nn.Conv2d(ndf * 16, 64, 4, 1, 0, bias=False)
+            nn.Conv2d(ndf * 16, 128, 4, 1, 0, bias=False)
         )
 
         self.fc_1 = nn.Linear(self.output_size, 128)
@@ -68,6 +69,8 @@ class PoseDiscriminatorDC(nn.Module):
         encoded_img = x.view(batch_size, -1)
 
         fc_input = torch.cat((encoded_img, encoded_annotate), 1)
+        #fc_input = encoded_img
+
         x = F.relu(self.norm_1(self.fc_1(fc_input)))
         x = F.relu(self.norm_2(self.fc_2(x)))
         x = self.fc_3(x)
@@ -102,6 +105,8 @@ class PoseDiscriminatorDC(nn.Module):
 class Discriminator(nn.Module):
     def __init__(self):
         super(Discriminator, self).__init__()
+        nc = 3
+        ndf = 64
         self.main = nn.Sequential(
             # input is (nc) x 64 x 64
             nn.Conv2d(nc, ndf, 4, 2, 1, bias=False),
@@ -125,6 +130,30 @@ class Discriminator(nn.Module):
             # state size. (ndf*8) x 4 x 4
             nn.Conv2d(ndf * 16, 1, 4, 1, 0, bias=False)
         )
+        self.fc_1 = nn.Linear(4, 1)
+        self.norm_1 = nn.BatchNorm1d(4)
+        self.fc_2 = nn.Linear(1024, 1)
 
     def forward(self, input):
-        return self.main(input)
+        batch_size = input.shape[0]
+        x = self.main(input)
+        return x
+        x = x.view((batch_size, -1))
+        #print(x.shape)
+        x = F.relu(self.norm_1(x))
+        x = self.fc_1(x)
+
+        return x
+
+class PoseDiscriminatorL(nn.Module):
+    def __init__(self):
+        super(PoseDiscriminatorL, self).__init__()
+
+        self.cnn = models.resnet18(pretrained=True)
+        self.fc_1 = nn.Linear(1000, 1)
+
+    def forward(self, input):
+        x = self.cnn(input)
+        x = self.fc_1(x)
+        #print(x.shape)
+        return x

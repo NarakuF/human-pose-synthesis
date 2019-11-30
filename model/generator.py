@@ -17,8 +17,8 @@ def create_emb_layer(embeddings, non_trainable=False):
 class PoseGeneratorDC(nn.Module):
     def __init__(self, embeddings):
         super(PoseGeneratorDC, self).__init__()
-        self.annotate_embed_size = 32 	# output encoded annotation size
-        self.z_size = 64 				# 初始的noise size
+        self.annotate_embed_size = 128 	# output encoded annotation size
+        self.z_size = 16 				# 初始的noise size
         self.emb_layer = create_emb_layer(embeddings, non_trainable=True)
         self.rnn = nn.LSTM(input_size = embeddings.size()[1], 
                            hidden_size = self.annotate_embed_size, 
