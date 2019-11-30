@@ -13,6 +13,7 @@ from torch.utils.data import Dataset, DataLoader
 from torchvision import transforms, utils
 from torchvision import models
 import torch.optim as optim
+from skimage.color import rgb2gray
 
 from skimage import io, transform
 from utils.process_img import Rescale, DynamicCrop, ToTensor
@@ -21,10 +22,11 @@ from utils.process_text import tokenizer, get_embeddings, get_word2idx
 TEXT_FEATURE = './intermediate/text_feature.pk'
 
 class PoseDataset(Dataset):
-    def __init__(self, csv_file, root_dir, transform = None, brand_new = False):
+    def __init__(self, csv_file, root_dir, transform = None, brand_new = False, gray_scale = False):
         self.data_list = pd.read_csv(csv_file)
         self.root_dir = root_dir
         self.transform = transform
+        self.gray_scale = gray_scale
 
         # Parsing text:
         if brand_new or not os.path.exists(TEXT_FEATURE):
@@ -58,8 +60,14 @@ class PoseDataset(Dataset):
         sample = {'raw': raw, 'parsing': parsing, 'pose': pose, 'annotate': annotate}
         if self.transform:
             sample = self.transform(sample)
+
+        if self.gray_scale:
+            sample['parsing'] = rgb2gray(sample['parsing'])
+            sample['pose'] = rgb2gray(sample['pose'])
         return sample
-    
+
+
+ 
 def print_sample(sample):
     print(sample['annotate'])
     fig = plt.figure(figsize=(10, 10))
