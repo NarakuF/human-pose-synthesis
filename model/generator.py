@@ -17,17 +17,18 @@ def create_emb_layer(embeddings, non_trainable=False):
 class PoseGeneratorDC(nn.Module):
     def __init__(self, embeddings):
         super(PoseGeneratorDC, self).__init__()
-        self.annotate_embed_size = 64 	# output encoded annotation size
+        self.annotate_embed_size = 32 	# output encoded annotation size
         self.z_size = 64 				# 初始的noise size
         self.emb_layer = create_emb_layer(embeddings, non_trainable=True)
         self.rnn = nn.LSTM(input_size = embeddings.size()[1], 
                            hidden_size = self.annotate_embed_size, 
                            num_layers = 2,
-                           batch_first = True)
+                           batch_first = True,
+                           bidirectional = True)
 
         ngf = 64						 # number of feature for the image
         nc = 3
-        in_feature_size = self.annotate_embed_size + self.z_size
+        in_feature_size = self.annotate_embed_size*2 + self.z_size  # *2因为bidirectional
 
         self.main = nn.Sequential(
             # input is Z, going into a convolution
@@ -60,7 +61,11 @@ class PoseGeneratorDC(nn.Module):
         # Get the encoded annotation from RNN
         embed_annotate = self.emb_layer(annotate)
         x, hidden = self.rnn(embed_annotate)
-        encoded_annotate = torch.reshape(x[:,-1,:], (-1, x[:,-1,:].shape[1], 1, 1))
+        encoded_x = x[:,0,:]+x[:,-1,:]
+        #print(encoded_x.shape)
+        encoded_annotate = torch.reshape(encoded_x, (-1, encoded_x.shape[1], 1, 1))
+        print(annotate.view(-1, annotate.shape[1]))
+        print(encoded_annotate.view(-1, encoded_x.shape[1]))
         # Generator的input: concatenate noise + annotation
         input_x = torch.cat((encoded_annotate, noise), 1)
         return self.main(input_x)

@@ -16,13 +16,14 @@ def create_emb_layer(embeddings, non_trainable=False):
 class PoseDiscriminatorDC(nn.Module):
     def __init__(self, embeddings):
         super(PoseDiscriminatorDC, self).__init__()
-        self.annotate_embed_size = 64   # output encoded annotation size
+        self.annotate_embed_size = 32   # output encoded annotation size
         self.output_size = 128          # output image representation size after going through CNN
         self.emb_layer = create_emb_layer(embeddings, non_trainable=True)
         self.rnn = nn.LSTM(input_size = embeddings.size()[1], 
                            hidden_size = self.annotate_embed_size, 
                            num_layers = 2,
-                           batch_first = True)
+                           batch_first = True,
+                           bidirectional = True)
         ndf = 64
         nc = 3
         self.main = nn.Sequential(
@@ -61,7 +62,7 @@ class PoseDiscriminatorDC(nn.Module):
 
         embed_annotate = self.emb_layer(annotate)
         x, hidden = self.rnn(embed_annotate)
-        encoded_annotate = x[:,-1,:]
+        encoded_annotate = x[:,0,:]+x[:,-1,:]
 
         x = self.main(image)
         encoded_img = x.view(batch_size, -1)
