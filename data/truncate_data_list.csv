@@ -1,0 +1,342 @@
+raw,parsing,pose,annotate
+./data/MPII_sample1/061443365.jpg,./data/MPII_sample1_parsing/061443365_vis.png,./data/MPII_sample1_pose/061443365_rendered.png,"canoeing, on camping trip (Taylor Code 270)"
+./data/MPII_sample1/099556890.jpg,./data/MPII_sample1_parsing/099556890_vis.png,./data/MPII_sample1_pose/099556890_rendered.png,"bicycling, general"
+./data/MPII_sample1/099363014.jpg,./data/MPII_sample1_parsing/099363014_vis.png,./data/MPII_sample1_pose/099363014_rendered.png,basketball
+./data/MPII_sample1/067767377.jpg,./data/MPII_sample1_parsing/067767377_vis.png,./data/MPII_sample1_pose/067767377_rendered.png,riding in a bus or train
+./data/MPII_sample1/009986735.jpg,./data/MPII_sample1_parsing/009986735_vis.png,./data/MPII_sample1_pose/009986735_rendered.png,trimming shrubs or trees
+./data/MPII_sample1/083990395.jpg,./data/MPII_sample1_parsing/083990395_vis.png,./data/MPII_sample1_pose/083990395_rendered.png,windsurfing
+./data/MPII_sample1/094125906.jpg,./data/MPII_sample1_parsing/094125906_vis.png,./data/MPII_sample1_pose/094125906_rendered.png,"fishing, dip net, setting net and retrieving fish, general"
+./data/MPII_sample1/076196284.jpg,./data/MPII_sample1_parsing/076196284_vis.png,./data/MPII_sample1_pose/076196284_rendered.png,cooking or food preparation
+./data/MPII_sample1/075777656.jpg,./data/MPII_sample1_parsing/075777656_vis.png,./data/MPII_sample1_pose/075777656_rendered.png,"vacuuming, general, moderate effort"
+./data/MPII_sample1/052319225.jpg,./data/MPII_sample1_parsing/052319225_vis.png,./data/MPII_sample1_pose/052319225_rendered.png,touringtravelingvacation involving riding in a vehicle
+./data/MPII_sample1/006240232.jpg,./data/MPII_sample1_parsing/006240232_vis.png,./data/MPII_sample1_pose/006240232_rendered.png,"flute, sitting"
+./data/MPII_sample1/006114618.jpg,./data/MPII_sample1_parsing/006114618_vis.png,./data/MPII_sample1_pose/006114618_rendered.png,circuit training
+./data/MPII_sample1/093671948.jpg,./data/MPII_sample1_parsing/093671948_vis.png,./data/MPII_sample1_pose/093671948_rendered.png,"badminton, competitive (Taylor Code 450)"
+./data/MPII_sample1/082853858.jpg,./data/MPII_sample1_parsing/082853858_vis.png,./data/MPII_sample1_pose/082853858_rendered.png,"bicycling, racing and road"
+./data/MPII_sample1/019494277.jpg,./data/MPII_sample1_parsing/019494277_vis.png,./data/MPII_sample1_pose/019494277_rendered.png,"slimnastics, jazzercise"
+./data/MPII_sample1/012292068.jpg,./data/MPII_sample1_parsing/012292068_vis.png,./data/MPII_sample1_pose/012292068_rendered.png,"hunting, general"
+./data/MPII_sample1/059782138.jpg,./data/MPII_sample1_parsing/059782138_vis.png,./data/MPII_sample1_pose/059782138_rendered.png,"standing, talking in church"
+./data/MPII_sample1/053655467.jpg,./data/MPII_sample1_parsing/053655467_vis.png,./data/MPII_sample1_pose/053655467_rendered.png,"polishing floors, standing, walking slowly, using electric polishing machine"
+./data/MPII_sample1/094378889.jpg,./data/MPII_sample1_parsing/094378889_vis.png,./data/MPII_sample1_pose/094378889_rendered.png,soccer
+./data/MPII_sample1/063137533.jpg,./data/MPII_sample1_parsing/063137533_vis.png,./data/MPII_sample1_pose/063137533_rendered.png,"rope skipping, general"
+./data/MPII_sample1/063495152.jpg,./data/MPII_sample1_parsing/063495152_vis.png,./data/MPII_sample1_pose/063495152_rendered.png,"upper body exercise, stationary bicycle - Airdyne (arms only) 40 rpm, moderate"
+./data/MPII_sample1/085614957.jpg,./data/MPII_sample1_parsing/085614957_vis.png,./data/MPII_sample1_pose/085614957_rendered.png,"tai chi, qi gong, general"
+./data/MPII_sample1/084102764.jpg,./data/MPII_sample1_parsing/084102764_vis.png,./data/MPII_sample1_pose/084102764_rendered.png,resistance training
+./data/MPII_sample1/062182409.jpg,./data/MPII_sample1_parsing/062182409_vis.png,./data/MPII_sample1_pose/062182409_rendered.png,"eating, sitting"
+./data/MPII_sample1/083914661.jpg,./data/MPII_sample1_parsing/083914661_vis.png,./data/MPII_sample1_pose/083914661_rendered.png,golf
+./data/MPII_sample1/046786991.jpg,./data/MPII_sample1_parsing/046786991_vis.png,./data/MPII_sample1_pose/046786991_rendered.png,washing and waxing car
+./data/MPII_sample1/067945414.jpg,./data/MPII_sample1_parsing/067945414_vis.png,./data/MPII_sample1_pose/067945414_rendered.png,horse racing
+./data/MPII_sample1/046332890.jpg,./data/MPII_sample1_parsing/046332890_vis.png,./data/MPII_sample1_pose/046332890_rendered.png,"yoga, Power"
+./data/MPII_sample1/021320428.jpg,./data/MPII_sample1_parsing/021320428_vis.png,./data/MPII_sample1_pose/021320428_rendered.png,"stair climbing, using or climbing up ladder (Taylor Code 030)"
+./data/MPII_sample1/050061953.jpg,./data/MPII_sample1_parsing/050061953_vis.png,./data/MPII_sample1_pose/050061953_rendered.png,"ethnic or cultural dancing (e.g., Greek, Middle Eastern, hula, salsa, merengue, bamba y plena, flame"
+./data/MPII_sample1/019984726.jpg,./data/MPII_sample1_parsing/019984726_vis.png,./data/MPII_sample1_pose/019984726_rendered.png,playing with animals
+./data/MPII_sample1/012662112.jpg,./data/MPII_sample1_parsing/012662112_vis.png,./data/MPII_sample1_pose/012662112_rendered.png,"canoeing, on camping trip (Taylor Code 270)"
+./data/MPII_sample1/069716625.jpg,./data/MPII_sample1_parsing/069716625_vis.png,./data/MPII_sample1_pose/069716625_rendered.png,"cleaning, general"
+./data/MPII_sample1/022780076.jpg,./data/MPII_sample1_parsing/022780076_vis.png,./data/MPII_sample1_pose/022780076_rendered.png,tailoring
+./data/MPII_sample1/064803032.jpg,./data/MPII_sample1_parsing/064803032_vis.png,./data/MPII_sample1_pose/064803032_rendered.png,"home repair, general"
+./data/MPII_sample1/078244164.jpg,./data/MPII_sample1_parsing/078244164_vis.png,./data/MPII_sample1_pose/078244164_rendered.png,backpacking
+./data/MPII_sample1/036509392.jpg,./data/MPII_sample1_parsing/036509392_vis.png,./data/MPII_sample1_pose/036509392_rendered.png,"fishing in stream, in waders (Taylor Code 670)"
+./data/MPII_sample1/024471560.jpg,./data/MPII_sample1_parsing/024471560_vis.png,./data/MPII_sample1_pose/024471560_rendered.png,resistance training
+./data/MPII_sample1/034827462.jpg,./data/MPII_sample1_parsing/034827462_vis.png,./data/MPII_sample1_pose/034827462_rendered.png,"polishing floors, standing, walking slowly, using electric polishing machine"
+./data/MPII_sample1/029811555.jpg,./data/MPII_sample1_parsing/029811555_vis.png,./data/MPII_sample1_pose/029811555_rendered.png,"bicycling, racing and road"
+./data/MPII_sample1/004664145.jpg,./data/MPII_sample1_parsing/004664145_vis.png,./data/MPII_sample1_pose/004664145_rendered.png,"massage therapist, standing"
+./data/MPII_sample1/037762908.jpg,./data/MPII_sample1_parsing/037762908_vis.png,./data/MPII_sample1_pose/037762908_rendered.png,"rowing, stationary"
+./data/MPII_sample1/087548865.jpg,./data/MPII_sample1_parsing/087548865_vis.png,./data/MPII_sample1_pose/087548865_rendered.png,"chambermaid, hotel housekeeper, making bed, cleaning bathroom, pushing cart"
+./data/MPII_sample1/017862888.jpg,./data/MPII_sample1_parsing/017862888_vis.png,./data/MPII_sample1_pose/017862888_rendered.png,fishing from river bank
+./data/MPII_sample1/063315138.jpg,./data/MPII_sample1_parsing/063315138_vis.png,./data/MPII_sample1_pose/063315138_rendered.png,racquetball
+./data/MPII_sample1/099672640.jpg,./data/MPII_sample1_parsing/099672640_vis.png,./data/MPII_sample1_pose/099672640_rendered.png,resistance training
+./data/MPII_sample1/034671876.jpg,./data/MPII_sample1_parsing/034671876_vis.png,./data/MPII_sample1_pose/034671876_rendered.png,cleaning gutters
+./data/MPII_sample1/086774739.jpg,./data/MPII_sample1_parsing/086774739_vis.png,./data/MPII_sample1_pose/086774739_rendered.png,"digging, spading, filling garden, composting"
+./data/MPII_sample1/001923170.jpg,./data/MPII_sample1_parsing/001923170_vis.png,./data/MPII_sample1_pose/001923170_rendered.png,picking fruits/vegetables
+./data/MPII_sample1/070090668.jpg,./data/MPII_sample1_parsing/070090668_vis.png,./data/MPII_sample1_pose/070090668_rendered.png,"shoe repair, general"
+./data/MPII_sample1/088865908.jpg,./data/MPII_sample1_parsing/088865908_vis.png,./data/MPII_sample1_pose/088865908_rendered.png,"hunting, general"
+./data/MPII_sample1/070662987.jpg,./data/MPII_sample1_parsing/070662987_vis.png,./data/MPII_sample1_pose/070662987_rendered.png,fishing from river bank
+./data/MPII_sample1/013436961.jpg,./data/MPII_sample1_parsing/013436961_vis.png,./data/MPII_sample1_pose/013436961_rendered.png,"typing, electric, manual or computer"
+./data/MPII_sample1/090147758.jpg,./data/MPII_sample1_parsing/090147758_vis.png,./data/MPII_sample1_pose/090147758_rendered.png,"shoe repair, general"
+./data/MPII_sample1/057314925.jpg,./data/MPII_sample1_parsing/057314925_vis.png,./data/MPII_sample1_pose/057314925_rendered.png,"sitting, arts and crafts,  carving wood, weaving, spinning wool"
+./data/MPII_sample1/033426337.jpg,./data/MPII_sample1_parsing/033426337_vis.png,./data/MPII_sample1_pose/033426337_rendered.png,"wheelbarrow, pushing garden cart or wheelbarrow"
+./data/MPII_sample1/070957919.jpg,./data/MPII_sample1_parsing/070957919_vis.png,./data/MPII_sample1_pose/070957919_rendered.png,"fishing, general"
+./data/MPII_sample1/061622425.jpg,./data/MPII_sample1_parsing/061622425_vis.png,./data/MPII_sample1_pose/061622425_rendered.png,"skiing, downhill"
+./data/MPII_sample1/070491113.jpg,./data/MPII_sample1_parsing/070491113_vis.png,./data/MPII_sample1_pose/070491113_rendered.png,cooking or food preparation
+./data/MPII_sample1/077482777.jpg,./data/MPII_sample1_parsing/077482777_vis.png,./data/MPII_sample1_pose/077482777_rendered.png,"garbage collector, walking, dumping bins into truck"
+./data/MPII_sample1/057780705.jpg,./data/MPII_sample1_parsing/057780705_vis.png,./data/MPII_sample1_pose/057780705_rendered.png,"rowing, stationary"
+./data/MPII_sample1/062096643.jpg,./data/MPII_sample1_parsing/062096643_vis.png,./data/MPII_sample1_pose/062096643_rendered.png,"yoga, Power"
+./data/MPII_sample1/025741123.jpg,./data/MPII_sample1_parsing/025741123_vis.png,./data/MPII_sample1_pose/025741123_rendered.png,"trapping game, general"
+./data/MPII_sample1/083848269.jpg,./data/MPII_sample1_parsing/083848269_vis.png,./data/MPII_sample1_pose/083848269_rendered.png,"paddle boarding, standing"
+./data/MPII_sample1/064894194.jpg,./data/MPII_sample1_parsing/064894194_vis.png,./data/MPII_sample1_pose/064894194_rendered.png,"fishing, general"
+./data/MPII_sample1/002114982.jpg,./data/MPII_sample1_parsing/002114982_vis.png,./data/MPII_sample1_pose/002114982_rendered.png,fishing from river bank
+./data/MPII_sample1/059459845.jpg,./data/MPII_sample1_parsing/059459845_vis.png,./data/MPII_sample1_pose/059459845_rendered.png,"masonry, concrete"
+./data/MPII_sample1/020728252.jpg,./data/MPII_sample1_parsing/020728252_vis.png,./data/MPII_sample1_pose/020728252_rendered.png,cooking or food preparation
+./data/MPII_sample1/082069616.jpg,./data/MPII_sample1_parsing/082069616_vis.png,./data/MPII_sample1_pose/082069616_rendered.png,circuit training
+./data/MPII_sample1/073392037.jpg,./data/MPII_sample1_parsing/073392037_vis.png,./data/MPII_sample1_pose/073392037_rendered.png,"gardening, general, moderate effort"
+./data/MPII_sample1/042748645.jpg,./data/MPII_sample1_parsing/042748645_vis.png,./data/MPII_sample1_pose/042748645_rendered.png,"rowing, stationary"
+./data/MPII_sample1/019032122.jpg,./data/MPII_sample1_parsing/019032122_vis.png,./data/MPII_sample1_pose/019032122_rendered.png,"windsurfing or kitesurfing, winter"
+./data/MPII_sample1/011057919.jpg,./data/MPII_sample1_parsing/011057919_vis.png,./data/MPII_sample1_pose/011057919_rendered.png,"walking, applying fertilizer or seeding a lawn, push applicator"
+./data/MPII_sample1/098056823.jpg,./data/MPII_sample1_parsing/098056823_vis.png,./data/MPII_sample1_pose/098056823_rendered.png,"carpentry, general, workshop (Taylor Code 620)"
+./data/MPII_sample1/069055264.jpg,./data/MPII_sample1_parsing/069055264_vis.png,./data/MPII_sample1_pose/069055264_rendered.png,reclining
+./data/MPII_sample1/066166726.jpg,./data/MPII_sample1_parsing/066166726_vis.png,./data/MPII_sample1_pose/066166726_rendered.png,"fishing, catching fish with hands"
+./data/MPII_sample1/078129065.jpg,./data/MPII_sample1_parsing/078129065_vis.png,./data/MPII_sample1_pose/078129065_rendered.png,running
+./data/MPII_sample1/002753672.jpg,./data/MPII_sample1_parsing/002753672_vis.png,./data/MPII_sample1_pose/002753672_rendered.png,planting trees
+./data/MPII_sample1/070248408.jpg,./data/MPII_sample1_parsing/070248408_vis.png,./data/MPII_sample1_pose/070248408_rendered.png,"standing, arts and crafts, sand painting, carving, weaving"
+./data/MPII_sample1/087035400.jpg,./data/MPII_sample1_parsing/087035400_vis.png,./data/MPII_sample1_pose/087035400_rendered.png,"shoe repair, general"
+./data/MPII_sample1/068332543.jpg,./data/MPII_sample1_parsing/068332543_vis.png,./data/MPII_sample1_pose/068332543_rendered.png,"shoveling snow, by hand"
+./data/MPII_sample1/056000436.jpg,./data/MPII_sample1_parsing/056000436_vis.png,./data/MPII_sample1_pose/056000436_rendered.png,laundry worker
+./data/MPII_sample1/079383591.jpg,./data/MPII_sample1_parsing/079383591_vis.png,./data/MPII_sample1_pose/079383591_rendered.png,"sitting, arts and crafts,  carving wood, weaving, spinning wool"
+./data/MPII_sample1/030557646.jpg,./data/MPII_sample1_parsing/030557646_vis.png,./data/MPII_sample1_pose/030557646_rendered.png,cooking or food preparation
+./data/MPII_sample1/005113164.jpg,./data/MPII_sample1_parsing/005113164_vis.png,./data/MPII_sample1_pose/005113164_rendered.png,"carrying, loading or stacking wood"
+./data/MPII_sample1/046103357.jpg,./data/MPII_sample1_parsing/046103357_vis.png,./data/MPII_sample1_pose/046103357_rendered.png,"aerobic, step"
+./data/MPII_sample1/046088128.jpg,./data/MPII_sample1_parsing/046088128_vis.png,./data/MPII_sample1_pose/046088128_rendered.png,"pilates, general"
+./data/MPII_sample1/053552588.jpg,./data/MPII_sample1_parsing/053552588_vis.png,./data/MPII_sample1_pose/053552588_rendered.png,"garbage collector, walking, dumping bins into truck"
+./data/MPII_sample1/082218291.jpg,./data/MPII_sample1_parsing/082218291_vis.png,./data/MPII_sample1_pose/082218291_rendered.png,race walking
+./data/MPII_sample1/023872881.jpg,./data/MPII_sample1_parsing/023872881_vis.png,./data/MPII_sample1_pose/023872881_rendered.png,"softball, general"
+./data/MPII_sample1/058559183.jpg,./data/MPII_sample1_parsing/058559183_vis.png,./data/MPII_sample1_pose/058559183_rendered.png,fishing from river bank
+./data/MPII_sample1/083151833.jpg,./data/MPII_sample1_parsing/083151833_vis.png,./data/MPII_sample1_pose/083151833_rendered.png,"rope skipping, general"
+./data/MPII_sample1/068258167.jpg,./data/MPII_sample1_parsing/068258167_vis.png,./data/MPII_sample1_pose/068258167_rendered.png,"skating, ice dancing"
+./data/MPII_sample1/076977231.jpg,./data/MPII_sample1_parsing/076977231_vis.png,./data/MPII_sample1_pose/076977231_rendered.png,"canoeing, kayaking, rowing, competitive"
+./data/MPII_sample1/082608207.jpg,./data/MPII_sample1_parsing/082608207_vis.png,./data/MPII_sample1_pose/082608207_rendered.png,"shoe repair, general"
+./data/MPII_sample1/047078500.jpg,./data/MPII_sample1_parsing/047078500_vis.png,./data/MPII_sample1_pose/047078500_rendered.png,"planting, potting, transplanting seedlings or plants, light effort"
+./data/MPII_sample1/012771348.jpg,./data/MPII_sample1_parsing/012771348_vis.png,./data/MPII_sample1_pose/012771348_rendered.png,"skiing, downhill"
+./data/MPII_sample1/041060407.jpg,./data/MPII_sample1_parsing/041060407_vis.png,./data/MPII_sample1_pose/041060407_rendered.png,"ballet, modern, or jazz"
+./data/MPII_sample1/062904699.jpg,./data/MPII_sample1_parsing/062904699_vis.png,./data/MPII_sample1_pose/062904699_rendered.png,"bicycling, mountain"
+./data/MPII_sample1/066739862.jpg,./data/MPII_sample1_parsing/066739862_vis.png,./data/MPII_sample1_pose/066739862_rendered.png,"farming, milking by machine, light effort"
+./data/MPII_sample1/054502692.jpg,./data/MPII_sample1_parsing/054502692_vis.png,./data/MPII_sample1_pose/054502692_rendered.png,using heavy tools
+./data/MPII_sample1/003774732.jpg,./data/MPII_sample1_parsing/003774732_vis.png,./data/MPII_sample1_pose/003774732_rendered.png,"bird watching, slow walk"
+./data/MPII_sample1/029470137.jpg,./data/MPII_sample1_parsing/029470137_vis.png,./data/MPII_sample1_pose/029470137_rendered.png,"bakery, general"
+./data/MPII_sample1/098935502.jpg,./data/MPII_sample1_parsing/098935502_vis.png,./data/MPII_sample1_pose/098935502_rendered.png,sharpening tools
+./data/MPII_sample1/092421843.jpg,./data/MPII_sample1_parsing/092421843_vis.png,./data/MPII_sample1_pose/092421843_rendered.png,"printing, paper industry worker, standing"
+./data/MPII_sample1/039120344.jpg,./data/MPII_sample1_parsing/039120344_vis.png,./data/MPII_sample1_pose/039120344_rendered.png,"washing fence, painting fence, moderate effort"
+./data/MPII_sample1/067040978.jpg,./data/MPII_sample1_parsing/067040978_vis.png,./data/MPII_sample1_pose/067040978_rendered.png,"carpentry, general"
+./data/MPII_sample1/026740203.jpg,./data/MPII_sample1_parsing/026740203_vis.png,./data/MPII_sample1_pose/026740203_rendered.png,fishing from river bank
+./data/MPII_sample1/066775603.jpg,./data/MPII_sample1_parsing/066775603_vis.png,./data/MPII_sample1_pose/066775603_rendered.png,skateboarding
+./data/MPII_sample1/007208434.jpg,./data/MPII_sample1_parsing/007208434_vis.png,./data/MPII_sample1_pose/007208434_rendered.png,"carpentry, finishing or refinishing cabinets or furniture"
+./data/MPII_sample1/021186654.jpg,./data/MPII_sample1_parsing/021186654_vis.png,./data/MPII_sample1_pose/021186654_rendered.png,automobile repair
+./data/MPII_sample1/093213392.jpg,./data/MPII_sample1_parsing/093213392_vis.png,./data/MPII_sample1_pose/093213392_rendered.png,cooking or food preparation
+./data/MPII_sample1/032597904.jpg,./data/MPII_sample1_parsing/032597904_vis.png,./data/MPII_sample1_pose/032597904_rendered.png,"standing, miscellaneous"
+./data/MPII_sample1/060857172.jpg,./data/MPII_sample1_parsing/060857172_vis.png,./data/MPII_sample1_pose/060857172_rendered.png,"tai chi, qi gong, general"
+./data/MPII_sample1/040690796.jpg,./data/MPII_sample1_parsing/040690796_vis.png,./data/MPII_sample1_pose/040690796_rendered.png,"digging, spading, filling garden, composting"
+./data/MPII_sample1/024273255.jpg,./data/MPII_sample1_parsing/024273255_vis.png,./data/MPII_sample1_pose/024273255_rendered.png,"shoveling snow, by hand"
+./data/MPII_sample1/045081941.jpg,./data/MPII_sample1_parsing/045081941_vis.png,./data/MPII_sample1_pose/045081941_rendered.png,"skating, ice dancing"
+./data/MPII_sample1/062849543.jpg,./data/MPII_sample1_parsing/062849543_vis.png,./data/MPII_sample1_pose/062849543_rendered.png,"bicycling, racing and road"
+./data/MPII_sample1/011571330.jpg,./data/MPII_sample1_parsing/011571330_vis.png,./data/MPII_sample1_pose/011571330_rendered.png,cooking or food preparation
+./data/MPII_sample1/036300145.jpg,./data/MPII_sample1_parsing/036300145_vis.png,./data/MPII_sample1_pose/036300145_rendered.png,"bicycling, BMX"
+./data/MPII_sample1/094099232.jpg,./data/MPII_sample1_parsing/094099232_vis.png,./data/MPII_sample1_pose/094099232_rendered.png,"fishing from boat or canoe, sitting"
+./data/MPII_sample1/017353692.jpg,./data/MPII_sample1_parsing/017353692_vis.png,./data/MPII_sample1_pose/017353692_rendered.png,"bakery, general"
+./data/MPII_sample1/093778763.jpg,./data/MPII_sample1_parsing/093778763_vis.png,./data/MPII_sample1_pose/093778763_rendered.png,resistance training
+./data/MPII_sample1/067115747.jpg,./data/MPII_sample1_parsing/067115747_vis.png,./data/MPII_sample1_pose/067115747_rendered.png,"bicycling, stationary"
+./data/MPII_sample1/020185345.jpg,./data/MPII_sample1_parsing/020185345_vis.png,./data/MPII_sample1_pose/020185345_rendered.png,racquetball
+./data/MPII_sample1/054142939.jpg,./data/MPII_sample1_parsing/054142939_vis.png,./data/MPII_sample1_pose/054142939_rendered.png,"canoeing, on camping trip (Taylor Code 270)"
+./data/MPII_sample1/048969004.jpg,./data/MPII_sample1_parsing/048969004_vis.png,./data/MPII_sample1_pose/048969004_rendered.png,"non-food shopping, with or without a cart, standing or walking"
+./data/MPII_sample1/038663219.jpg,./data/MPII_sample1_parsing/038663219_vis.png,./data/MPII_sample1_pose/038663219_rendered.png,playing with animals
+./data/MPII_sample1/003654967.jpg,./data/MPII_sample1_parsing/003654967_vis.png,./data/MPII_sample1_pose/003654967_rendered.png,serving food in church
+./data/MPII_sample1/084541920.jpg,./data/MPII_sample1_parsing/084541920_vis.png,./data/MPII_sample1_pose/084541920_rendered.png,laying or removing carpet
+./data/MPII_sample1/071510016.jpg,./data/MPII_sample1_parsing/071510016_vis.png,./data/MPII_sample1_pose/071510016_rendered.png,"sitting, playing an instrument at church"
+./data/MPII_sample1/062268781.jpg,./data/MPII_sample1_parsing/062268781_vis.png,./data/MPII_sample1_pose/062268781_rendered.png,cooking or food preparation
+./data/MPII_sample1/032523823.jpg,./data/MPII_sample1_parsing/032523823_vis.png,./data/MPII_sample1_pose/032523823_rendered.png,"drawing, writing, painting, standing"
+./data/MPII_sample1/022652163.jpg,./data/MPII_sample1_parsing/022652163_vis.png,./data/MPII_sample1_pose/022652163_rendered.png,circuit training
+./data/MPII_sample1/055284001.jpg,./data/MPII_sample1_parsing/055284001_vis.png,./data/MPII_sample1_pose/055284001_rendered.png,"kitchen activity, general, (e.g., cooking, washing dishes, cleaning up), moderate effort"
+./data/MPII_sample1/041927166.jpg,./data/MPII_sample1_parsing/041927166_vis.png,./data/MPII_sample1_pose/041927166_rendered.png,"yoga, Power"
+./data/MPII_sample1/022159343.jpg,./data/MPII_sample1_parsing/022159343_vis.png,./data/MPII_sample1_pose/022159343_rendered.png,"fishing in stream, in waders (Taylor Code 670)"
+./data/MPII_sample1/094584441.jpg,./data/MPII_sample1_parsing/094584441_vis.png,./data/MPII_sample1_pose/094584441_rendered.png,"caulking, except log cabin"
+./data/MPII_sample1/002363859.jpg,./data/MPII_sample1_parsing/002363859_vis.png,./data/MPII_sample1_pose/002363859_rendered.png,"irrigation channels, opening and closing ports"
+./data/MPII_sample1/098129709.jpg,./data/MPII_sample1_parsing/098129709_vis.png,./data/MPII_sample1_pose/098129709_rendered.png,"yoga, Power"
+./data/MPII_sample1/003367640.jpg,./data/MPII_sample1_parsing/003367640_vis.png,./data/MPII_sample1_pose/003367640_rendered.png,"moto-cross, off-road motor sports, all-terrain vehicle, general"
+./data/MPII_sample1/041473580.jpg,./data/MPII_sample1_parsing/041473580_vis.png,./data/MPII_sample1_pose/041473580_rendered.png,"sitting, arts and crafts,  carving wood, weaving, spinning wool"
+./data/MPII_sample1/045138702.jpg,./data/MPII_sample1_parsing/045138702_vis.png,./data/MPII_sample1_pose/045138702_rendered.png,"therapeutic exercise ball, Fitball exercise"
+./data/MPII_sample1/083194154.jpg,./data/MPII_sample1_parsing/083194154_vis.png,./data/MPII_sample1_pose/083194154_rendered.png,"pilates, general"
+./data/MPII_sample1/077715291.jpg,./data/MPII_sample1_parsing/077715291_vis.png,./data/MPII_sample1_pose/077715291_rendered.png,"cleaning windows, washing windows, general"
+./data/MPII_sample1/018805857.jpg,./data/MPII_sample1_parsing/018805857_vis.png,./data/MPII_sample1_pose/018805857_rendered.png,snowboarding
+./data/MPII_sample1/012886987.jpg,./data/MPII_sample1_parsing/012886987_vis.png,./data/MPII_sample1_pose/012886987_rendered.png,"therapeutic exercise ball, Fitball exercise"
+./data/MPII_sample1/089544531.jpg,./data/MPII_sample1_parsing/089544531_vis.png,./data/MPII_sample1_pose/089544531_rendered.png,resistance training
+./data/MPII_sample1/027426185.jpg,./data/MPII_sample1_parsing/027426185_vis.png,./data/MPII_sample1_pose/027426185_rendered.png,soccer
+./data/MPII_sample1/030980688.jpg,./data/MPII_sample1_parsing/030980688_vis.png,./data/MPII_sample1_pose/030980688_rendered.png,"yoga, Power"
+./data/MPII_sample1/087079717.jpg,./data/MPII_sample1_parsing/087079717_vis.png,./data/MPII_sample1_pose/087079717_rendered.png,backpacking
+./data/MPII_sample1/028740960.jpg,./data/MPII_sample1_parsing/028740960_vis.png,./data/MPII_sample1_pose/028740960_rendered.png,"cleaning, sweeping floor or carpet"
+./data/MPII_sample1/088283649.jpg,./data/MPII_sample1_parsing/088283649_vis.png,./data/MPII_sample1_pose/088283649_rendered.png,"canoeing, kayaking, rowing, competitive"
+./data/MPII_sample1/086200647.jpg,./data/MPII_sample1_parsing/086200647_vis.png,./data/MPII_sample1_pose/086200647_rendered.png,"cutting and smoking fish, drying fish or meat"
+./data/MPII_sample1/007700493.jpg,./data/MPII_sample1_parsing/007700493_vis.png,./data/MPII_sample1_pose/007700493_rendered.png,"canoeing, kayaking, rowing, competitive"
+./data/MPII_sample1/029240449.jpg,./data/MPII_sample1_parsing/029240449_vis.png,./data/MPII_sample1_pose/029240449_rendered.png,"pistol shooting or trap shooting, standing"
+./data/MPII_sample1/091357801.jpg,./data/MPII_sample1_parsing/091357801_vis.png,./data/MPII_sample1_pose/091357801_rendered.png,"skiing, cross-country, biathlon, skating technique"
+./data/MPII_sample1/089251142.jpg,./data/MPII_sample1_parsing/089251142_vis.png,./data/MPII_sample1_pose/089251142_rendered.png,"ballet, modern, or jazz"
+./data/MPII_sample1/096574721.jpg,./data/MPII_sample1_parsing/096574721_vis.png,./data/MPII_sample1_pose/096574721_rendered.png,running
+./data/MPII_sample1/038066826.jpg,./data/MPII_sample1_parsing/038066826_vis.png,./data/MPII_sample1_pose/038066826_rendered.png,washing and waxing car
+./data/MPII_sample1/088888794.jpg,./data/MPII_sample1_parsing/088888794_vis.png,./data/MPII_sample1_pose/088888794_rendered.png,snow shoeing
+./data/MPII_sample1/059768234.jpg,./data/MPII_sample1_parsing/059768234_vis.png,./data/MPII_sample1_pose/059768234_rendered.png,"copying documents, standing"
+./data/MPII_sample1/080978403.jpg,./data/MPII_sample1_parsing/080978403_vis.png,./data/MPII_sample1_pose/080978403_rendered.png,"cleaning windows, washing windows, general"
+./data/MPII_sample1/035114369.jpg,./data/MPII_sample1_parsing/035114369_vis.png,./data/MPII_sample1_pose/035114369_rendered.png,"guitar, classical, folk, sitting"
+./data/MPII_sample1/042655285.jpg,./data/MPII_sample1_parsing/042655285_vis.png,./data/MPII_sample1_pose/042655285_rendered.png,"bakery, general"
+./data/MPII_sample1/018564670.jpg,./data/MPII_sample1_parsing/018564670_vis.png,./data/MPII_sample1_pose/018564670_rendered.png,"rope skipping, general"
+./data/MPII_sample1/058622983.jpg,./data/MPII_sample1_parsing/058622983_vis.png,./data/MPII_sample1_pose/058622983_rendered.png,"truck driving, loading and unloading truck, tying down load, standing, walking and carrying heavy lo"
+./data/MPII_sample1/059541480.jpg,./data/MPII_sample1_parsing/059541480_vis.png,./data/MPII_sample1_pose/059541480_rendered.png,"ballet, modern, or jazz"
+./data/MPII_sample1/012325562.jpg,./data/MPII_sample1_parsing/012325562_vis.png,./data/MPII_sample1_pose/012325562_rendered.png,running
+./data/MPII_sample1/091079493.jpg,./data/MPII_sample1_parsing/091079493_vis.png,./data/MPII_sample1_pose/091079493_rendered.png,using crutches
+./data/MPII_sample1/092213133.jpg,./data/MPII_sample1_parsing/092213133_vis.png,./data/MPII_sample1_pose/092213133_rendered.png,"fishing in stream, in waders (Taylor Code 670)"
+./data/MPII_sample1/019201625.jpg,./data/MPII_sample1_parsing/019201625_vis.png,./data/MPII_sample1_pose/019201625_rendered.png,playing with animals
+./data/MPII_sample1/036042683.jpg,./data/MPII_sample1_parsing/036042683_vis.png,./data/MPII_sample1_pose/036042683_rendered.png,"Alaska Native Games, Eskimo Olympics, general"
+./data/MPII_sample1/060732442.jpg,./data/MPII_sample1_parsing/060732442_vis.png,./data/MPII_sample1_pose/060732442_rendered.png,"cleaning, general"
+./data/MPII_sample1/069297179.jpg,./data/MPII_sample1_parsing/069297179_vis.png,./data/MPII_sample1_pose/069297179_rendered.png,custodial work
+./data/MPII_sample1/059315822.jpg,./data/MPII_sample1_parsing/059315822_vis.png,./data/MPII_sample1_pose/059315822_rendered.png,"sitting, playing an instrument at church"
+./data/MPII_sample1/062829323.jpg,./data/MPII_sample1_parsing/062829323_vis.png,./data/MPII_sample1_pose/062829323_rendered.png,"non-food shopping, with or without a cart, standing or walking"
+./data/MPII_sample1/098117784.jpg,./data/MPII_sample1_parsing/098117784_vis.png,./data/MPII_sample1_pose/098117784_rendered.png,climbing hills
+./data/MPII_sample1/097287132.jpg,./data/MPII_sample1_parsing/097287132_vis.png,./data/MPII_sample1_pose/097287132_rendered.png,"badminton, competitive (Taylor Code 450)"
+./data/MPII_sample1/094103430.jpg,./data/MPII_sample1_parsing/094103430_vis.png,./data/MPII_sample1_pose/094103430_rendered.png,resistance training
+./data/MPII_sample1/093714497.jpg,./data/MPII_sample1_parsing/093714497_vis.png,./data/MPII_sample1_pose/093714497_rendered.png,"painting inside house,wallpapering, scraping paint"
+./data/MPII_sample1/050885165.jpg,./data/MPII_sample1_parsing/050885165_vis.png,./data/MPII_sample1_pose/050885165_rendered.png,forestry
+./data/MPII_sample1/019587219.jpg,./data/MPII_sample1_parsing/019587219_vis.png,./data/MPII_sample1_pose/019587219_rendered.png,"pilates, general"
+./data/MPII_sample1/077132314.jpg,./data/MPII_sample1_parsing/077132314_vis.png,./data/MPII_sample1_pose/077132314_rendered.png,"fishing in stream, in waders (Taylor Code 670)"
+./data/MPII_sample1/031886682.jpg,./data/MPII_sample1_parsing/031886682_vis.png,./data/MPII_sample1_pose/031886682_rendered.png,"children_s games, adults playing (e.g., hopscotch, 4-square, dodgeball, playground apparatus, t-ball"
+./data/MPII_sample1/021494038.jpg,./data/MPII_sample1_parsing/021494038_vis.png,./data/MPII_sample1_pose/021494038_rendered.png,"horse grooming, feeding, cleaning, harnessing and unharnessing"
+./data/MPII_sample1/060435932.jpg,./data/MPII_sample1_parsing/060435932_vis.png,./data/MPII_sample1_pose/060435932_rendered.png,golf
+./data/MPII_sample1/091662337.jpg,./data/MPII_sample1_parsing/091662337_vis.png,./data/MPII_sample1_pose/091662337_rendered.png,basketball
+./data/MPII_sample1/043501459.jpg,./data/MPII_sample1_parsing/043501459_vis.png,./data/MPII_sample1_pose/043501459_rendered.png,sanding floors with a power sander
+./data/MPII_sample1/077549575.jpg,./data/MPII_sample1_parsing/077549575_vis.png,./data/MPII_sample1_pose/077549575_rendered.png,forestry
+./data/MPII_sample1/064096553.jpg,./data/MPII_sample1_parsing/064096553_vis.png,./data/MPII_sample1_pose/064096553_rendered.png,rock climbing
+./data/MPII_sample1/016514871.jpg,./data/MPII_sample1_parsing/016514871_vis.png,./data/MPII_sample1_pose/016514871_rendered.png,skateboarding
+./data/MPII_sample1/077686033.jpg,./data/MPII_sample1_parsing/077686033_vis.png,./data/MPII_sample1_pose/077686033_rendered.png,"painting inside house,wallpapering, scraping paint"
+./data/MPII_sample1/009526207.jpg,./data/MPII_sample1_parsing/009526207_vis.png,./data/MPII_sample1_pose/009526207_rendered.png,playing with children
+./data/MPII_sample1/035070979.jpg,./data/MPII_sample1_parsing/035070979_vis.png,./data/MPII_sample1_pose/035070979_rendered.png,"video exercise workouts, TV conditioning programs"
+./data/MPII_sample1/069924274.jpg,./data/MPII_sample1_parsing/069924274_vis.png,./data/MPII_sample1_pose/069924274_rendered.png,clearing brush
+./data/MPII_sample1/088742454.jpg,./data/MPII_sample1_parsing/088742454_vis.png,./data/MPII_sample1_pose/088742454_rendered.png,"moving furniture, household items, carrying boxes"
+./data/MPII_sample1/001301021.jpg,./data/MPII_sample1_parsing/001301021_vis.png,./data/MPII_sample1_pose/001301021_rendered.png,"printing, paper industry worker, standing"
+./data/MPII_sample1/099153278.jpg,./data/MPII_sample1_parsing/099153278_vis.png,./data/MPII_sample1_pose/099153278_rendered.png,"mowing lawn, walk, hand mower (Taylor Code 570)"
+./data/MPII_sample1/003905462.jpg,./data/MPII_sample1_parsing/003905462_vis.png,./data/MPII_sample1_pose/003905462_rendered.png,"sitting, teaching stretching or yoga, or light effort exercise class"
+./data/MPII_sample1/039779344.jpg,./data/MPII_sample1_parsing/039779344_vis.png,./data/MPII_sample1_pose/039779344_rendered.png,golf
+./data/MPII_sample1/026080843.jpg,./data/MPII_sample1_parsing/026080843_vis.png,./data/MPII_sample1_pose/026080843_rendered.png,"garbage collector, walking, dumping bins into truck"
+./data/MPII_sample1/032456428.jpg,./data/MPII_sample1_parsing/032456428_vis.png,./data/MPII_sample1_pose/032456428_rendered.png,"painting, outside home (Taylor Code 650)"
+./data/MPII_sample1/023833721.jpg,./data/MPII_sample1_parsing/023833721_vis.png,./data/MPII_sample1_pose/023833721_rendered.png,"pilates, general"
+./data/MPII_sample1/029481724.jpg,./data/MPII_sample1_parsing/029481724_vis.png,./data/MPII_sample1_pose/029481724_rendered.png,"ethnic or cultural dancing (e.g., Greek, Middle Eastern, hula, salsa, merengue, bamba y plena, flame"
+./data/MPII_sample1/064442317.jpg,./data/MPII_sample1_parsing/064442317_vis.png,./data/MPII_sample1_pose/064442317_rendered.png,"fishing in stream, in waders (Taylor Code 670)"
+./data/MPII_sample1/072969963.jpg,./data/MPII_sample1_parsing/072969963_vis.png,./data/MPII_sample1_pose/072969963_rendered.png,"laughing, sitting"
+./data/MPII_sample1/077183604.jpg,./data/MPII_sample1_parsing/077183604_vis.png,./data/MPII_sample1_pose/077183604_rendered.png,roofing
+./data/MPII_sample1/086362300.jpg,./data/MPII_sample1_parsing/086362300_vis.png,./data/MPII_sample1_pose/086362300_rendered.png,handball
+./data/MPII_sample1/023287915.jpg,./data/MPII_sample1_parsing/023287915_vis.png,./data/MPII_sample1_pose/023287915_rendered.png,"ethnic or cultural dancing (e.g., Greek, Middle Eastern, hula, salsa, merengue, bamba y plena, flame"
+./data/MPII_sample1/067988497.jpg,./data/MPII_sample1_parsing/067988497_vis.png,./data/MPII_sample1_pose/067988497_rendered.png,"slide board exercise, general"
+./data/MPII_sample1/097601382.jpg,./data/MPII_sample1_parsing/097601382_vis.png,./data/MPII_sample1_pose/097601382_rendered.png,"sweeping garage, sidewalk or outside of house"
+./data/MPII_sample1/023532555.jpg,./data/MPII_sample1_parsing/023532555_vis.png,./data/MPII_sample1_pose/023532555_rendered.png,"double bass, standing"
+./data/MPII_sample1/052946485.jpg,./data/MPII_sample1_parsing/052946485_vis.png,./data/MPII_sample1_pose/052946485_rendered.png,"cello, sitting"
+./data/MPII_sample1/053110942.jpg,./data/MPII_sample1_parsing/053110942_vis.png,./data/MPII_sample1_pose/053110942_rendered.png,walking the dog
+./data/MPII_sample1/098349321.jpg,./data/MPII_sample1_parsing/098349321_vis.png,./data/MPII_sample1_pose/098349321_rendered.png,cooking or food preparation
+./data/MPII_sample1/060430442.jpg,./data/MPII_sample1_parsing/060430442_vis.png,./data/MPII_sample1_pose/060430442_rendered.png,"ballet, modern, or jazz"
+./data/MPII_sample1/076399705.jpg,./data/MPII_sample1_parsing/076399705_vis.png,./data/MPII_sample1_pose/076399705_rendered.png,"drawing, writing, painting, standing"
+./data/MPII_sample1/008786650.jpg,./data/MPII_sample1_parsing/008786650_vis.png,./data/MPII_sample1_pose/008786650_rendered.png,basketball
+./data/MPII_sample1/040287328.jpg,./data/MPII_sample1_parsing/040287328_vis.png,./data/MPII_sample1_pose/040287328_rendered.png,"hunting, general"
+./data/MPII_sample1/059491602.jpg,./data/MPII_sample1_parsing/059491602_vis.png,./data/MPII_sample1_pose/059491602_rendered.png,"skindiving, scuba diving, snorkeling"
+./data/MPII_sample1/034496208.jpg,./data/MPII_sample1_parsing/034496208_vis.png,./data/MPII_sample1_pose/034496208_rendered.png,"cook, chef"
+./data/MPII_sample1/010189239.jpg,./data/MPII_sample1_parsing/010189239_vis.png,./data/MPII_sample1_pose/010189239_rendered.png,wash dishes
+./data/MPII_sample1/091704559.jpg,./data/MPII_sample1_parsing/091704559_vis.png,./data/MPII_sample1_pose/091704559_rendered.png,"masonry, concrete"
+./data/MPII_sample1/080069146.jpg,./data/MPII_sample1_parsing/080069146_vis.png,./data/MPII_sample1_pose/080069146_rendered.png,"making bed, changing linens"
+./data/MPII_sample1/049381404.jpg,./data/MPII_sample1_parsing/049381404_vis.png,./data/MPII_sample1_pose/049381404_rendered.png,wash dishes
+./data/MPII_sample1/015294319.jpg,./data/MPII_sample1_parsing/015294319_vis.png,./data/MPII_sample1_pose/015294319_rendered.png,"kitchen activity, general, (e.g., cooking, washing dishes, cleaning up), moderate effort"
+./data/MPII_sample1/090956443.jpg,./data/MPII_sample1_parsing/090956443_vis.png,./data/MPII_sample1_pose/090956443_rendered.png,circuit training
+./data/MPII_sample1/036504757.jpg,./data/MPII_sample1_parsing/036504757_vis.png,./data/MPII_sample1_pose/036504757_rendered.png,"standing, arts and crafts, sand painting, carving, weaving"
+./data/MPII_sample1/044120110.jpg,./data/MPII_sample1_parsing/044120110_vis.png,./data/MPII_sample1_pose/044120110_rendered.png,"skiing, downhill"
+./data/MPII_sample1/055810844.jpg,./data/MPII_sample1_parsing/055810844_vis.png,./data/MPII_sample1_pose/055810844_rendered.png,"skating, speed, competitive"
+./data/MPII_sample1/036844892.jpg,./data/MPII_sample1_parsing/036844892_vis.png,./data/MPII_sample1_pose/036844892_rendered.png,"rope skipping, general"
+./data/MPII_sample1/074196671.jpg,./data/MPII_sample1_parsing/074196671_vis.png,./data/MPII_sample1_pose/074196671_rendered.png,"carpentry, home remodeling tasks"
+./data/MPII_sample1/029708055.jpg,./data/MPII_sample1_parsing/029708055_vis.png,./data/MPII_sample1_pose/029708055_rendered.png,"bakery, general"
+./data/MPII_sample1/003106813.jpg,./data/MPII_sample1_parsing/003106813_vis.png,./data/MPII_sample1_pose/003106813_rendered.png,repairing appliances
+./data/MPII_sample1/061561511.jpg,./data/MPII_sample1_parsing/061561511_vis.png,./data/MPII_sample1_pose/061561511_rendered.png,"washing fence, painting fence, moderate effort"
+./data/MPII_sample1/076549850.jpg,./data/MPII_sample1_parsing/076549850_vis.png,./data/MPII_sample1_pose/076549850_rendered.png,"carpentry, home remodeling tasks"
+./data/MPII_sample1/020588731.jpg,./data/MPII_sample1_parsing/020588731_vis.png,./data/MPII_sample1_pose/020588731_rendered.png,felling trees
+./data/MPII_sample1/001083765.jpg,./data/MPII_sample1_parsing/001083765_vis.png,./data/MPII_sample1_pose/001083765_rendered.png,"video exercise workouts, TV conditioning programs"
+./data/MPII_sample1/026004804.jpg,./data/MPII_sample1_parsing/026004804_vis.png,./data/MPII_sample1_pose/026004804_rendered.png,sanding floors with a power sander
+./data/MPII_sample1/095027922.jpg,./data/MPII_sample1_parsing/095027922_vis.png,./data/MPII_sample1_pose/095027922_rendered.png,"pilates, general"
+./data/MPII_sample1/008360228.jpg,./data/MPII_sample1_parsing/008360228_vis.png,./data/MPII_sample1_pose/008360228_rendered.png,"fishing, general"
+./data/MPII_sample1/017167820.jpg,./data/MPII_sample1_parsing/017167820_vis.png,./data/MPII_sample1_pose/017167820_rendered.png,"carpentry, general"
+./data/MPII_sample1/001137337.jpg,./data/MPII_sample1_parsing/001137337_vis.png,./data/MPII_sample1_pose/001137337_rendered.png,basketball
+./data/MPII_sample1/089593450.jpg,./data/MPII_sample1_parsing/089593450_vis.png,./data/MPII_sample1_pose/089593450_rendered.png,tennis
+./data/MPII_sample1/092053523.jpg,./data/MPII_sample1_parsing/092053523_vis.png,./data/MPII_sample1_pose/092053523_rendered.png,chopping wood
+./data/MPII_sample1/023640396.jpg,./data/MPII_sample1_parsing/023640396_vis.png,./data/MPII_sample1_pose/023640396_rendered.png,"bicycling, mountain"
+./data/MPII_sample1/047690543.jpg,./data/MPII_sample1_parsing/047690543_vis.png,./data/MPII_sample1_pose/047690543_rendered.png,"active workstation, treadmill desk, walking"
+./data/MPII_sample1/072268357.jpg,./data/MPII_sample1_parsing/072268357_vis.png,./data/MPII_sample1_pose/072268357_rendered.png,"fishing, general"
+./data/MPII_sample1/002185138.jpg,./data/MPII_sample1_parsing/002185138_vis.png,./data/MPII_sample1_pose/002185138_rendered.png,"paddle boarding, standing"
+./data/MPII_sample1/043539763.jpg,./data/MPII_sample1_parsing/043539763_vis.png,./data/MPII_sample1_pose/043539763_rendered.png,"planting seedlings, shrub, stooping, moderate effort"
+./data/MPII_sample1/025005676.jpg,./data/MPII_sample1_parsing/025005676_vis.png,./data/MPII_sample1_pose/025005676_rendered.png,paddleball
+./data/MPII_sample1/090828862.jpg,./data/MPII_sample1_parsing/090828862_vis.png,./data/MPII_sample1_pose/090828862_rendered.png,"planting seedlings, shrub, stooping, moderate effort"
+./data/MPII_sample1/055133055.jpg,./data/MPII_sample1_parsing/055133055_vis.png,./data/MPII_sample1_pose/055133055_rendered.png,"farming, cultivating field"
+./data/MPII_sample1/021372115.jpg,./data/MPII_sample1_parsing/021372115_vis.png,./data/MPII_sample1_pose/021372115_rendered.png,"bicycling, BMX"
+./data/MPII_sample1/052264343.jpg,./data/MPII_sample1_parsing/052264343_vis.png,./data/MPII_sample1_pose/052264343_rendered.png,"cook, chef"
+./data/MPII_sample1/007006870.jpg,./data/MPII_sample1_parsing/007006870_vis.png,./data/MPII_sample1_pose/007006870_rendered.png,"volleyball, indoor"
+./data/MPII_sample1/049031249.jpg,./data/MPII_sample1_parsing/049031249_vis.png,./data/MPII_sample1_pose/049031249_rendered.png,"pilates, general"
+./data/MPII_sample1/045418366.jpg,./data/MPII_sample1_parsing/045418366_vis.png,./data/MPII_sample1_pose/045418366_rendered.png,"cleaning, sweeping floor or carpet"
+./data/MPII_sample1/032835779.jpg,./data/MPII_sample1_parsing/032835779_vis.png,./data/MPII_sample1_pose/032835779_rendered.png,surfing
+./data/MPII_sample1/063405051.jpg,./data/MPII_sample1_parsing/063405051_vis.png,./data/MPII_sample1_pose/063405051_rendered.png,"vacuuming, general, moderate effort"
+./data/MPII_sample1/031491844.jpg,./data/MPII_sample1_parsing/031491844_vis.png,./data/MPII_sample1_pose/031491844_rendered.png,"bicycling, mountain"
+./data/MPII_sample1/080716008.jpg,./data/MPII_sample1_parsing/080716008_vis.png,./data/MPII_sample1_pose/080716008_rendered.png,"fishing, general"
+./data/MPII_sample1/045473986.jpg,./data/MPII_sample1_parsing/045473986_vis.png,./data/MPII_sample1_pose/045473986_rendered.png,tailoring
+./data/MPII_sample1/050675782.jpg,./data/MPII_sample1_parsing/050675782_vis.png,./data/MPII_sample1_pose/050675782_rendered.png,planting trees
+./data/MPII_sample1/087325436.jpg,./data/MPII_sample1_parsing/087325436_vis.png,./data/MPII_sample1_pose/087325436_rendered.png,cooking or food preparation
+./data/MPII_sample1/063408806.jpg,./data/MPII_sample1_parsing/063408806_vis.png,./data/MPII_sample1_pose/063408806_rendered.png,rock climbing
+./data/MPII_sample1/026799645.jpg,./data/MPII_sample1_parsing/026799645_vis.png,./data/MPII_sample1_pose/026799645_rendered.png,"painting, outside home (Taylor Code 650)"
+./data/MPII_sample1/065231920.jpg,./data/MPII_sample1_parsing/065231920_vis.png,./data/MPII_sample1_pose/065231920_rendered.png,rock climbing
+./data/MPII_sample1/050445594.jpg,./data/MPII_sample1_parsing/050445594_vis.png,./data/MPII_sample1_pose/050445594_rendered.png,"chambermaid, hotel housekeeper, making bed, cleaning bathroom, pushing cart"
+./data/MPII_sample1/048735437.jpg,./data/MPII_sample1_parsing/048735437_vis.png,./data/MPII_sample1_pose/048735437_rendered.png,"shoe repair, general"
+./data/MPII_sample1/092102952.jpg,./data/MPII_sample1_parsing/092102952_vis.png,./data/MPII_sample1_pose/092102952_rendered.png,chopping wood
+./data/MPII_sample1/020838368.jpg,./data/MPII_sample1_parsing/020838368_vis.png,./data/MPII_sample1_pose/020838368_rendered.png,laying or removing carpet
+./data/MPII_sample1/068128211.jpg,./data/MPII_sample1_parsing/068128211_vis.png,./data/MPII_sample1_pose/068128211_rendered.png,"cleaning, general"
+./data/MPII_sample1/037123493.jpg,./data/MPII_sample1_parsing/037123493_vis.png,./data/MPII_sample1_pose/037123493_rendered.png,"bicycling, mountain"
+./data/MPII_sample1/009128668.jpg,./data/MPII_sample1_parsing/009128668_vis.png,./data/MPII_sample1_pose/009128668_rendered.png,"video exercise workouts, TV conditioning programs"
+./data/MPII_sample1/079219119.jpg,./data/MPII_sample1_parsing/079219119_vis.png,./data/MPII_sample1_pose/079219119_rendered.png,"rope skipping, general"
+./data/MPII_sample1/067421016.jpg,./data/MPII_sample1_parsing/067421016_vis.png,./data/MPII_sample1_pose/067421016_rendered.png,washing and waxing car
+./data/MPII_sample1/059527684.jpg,./data/MPII_sample1_parsing/059527684_vis.png,./data/MPII_sample1_pose/059527684_rendered.png,roofing
+./data/MPII_sample1/026560004.jpg,./data/MPII_sample1_parsing/026560004_vis.png,./data/MPII_sample1_pose/026560004_rendered.png,ironing
+./data/MPII_sample1/053929826.jpg,./data/MPII_sample1_parsing/053929826_vis.png,./data/MPII_sample1_pose/053929826_rendered.png,"diving, springboard or platform"
+./data/MPII_sample1/025434009.jpg,./data/MPII_sample1_parsing/025434009_vis.png,./data/MPII_sample1_pose/025434009_rendered.png,"softball, general"
+./data/MPII_sample1/099132790.jpg,./data/MPII_sample1_parsing/099132790_vis.png,./data/MPII_sample1_pose/099132790_rendered.png,serving food and drinks
+./data/MPII_sample1/095059201.jpg,./data/MPII_sample1_parsing/095059201_vis.png,./data/MPII_sample1_pose/095059201_rendered.png,"gardening, general, moderate effort"
+./data/MPII_sample1/054168682.jpg,./data/MPII_sample1_parsing/054168682_vis.png,./data/MPII_sample1_pose/054168682_rendered.png,"painting, outside home (Taylor Code 650)"
+./data/MPII_sample1/065929147.jpg,./data/MPII_sample1_parsing/065929147_vis.png,./data/MPII_sample1_pose/065929147_rendered.png,"bicycling, stationary"
+./data/MPII_sample1/073022172.jpg,./data/MPII_sample1_parsing/073022172_vis.png,./data/MPII_sample1_pose/073022172_rendered.png,rock climbing
+./data/MPII_sample1/012210991.jpg,./data/MPII_sample1_parsing/012210991_vis.png,./data/MPII_sample1_pose/012210991_rendered.png,orienteering
+./data/MPII_sample1/040227462.jpg,./data/MPII_sample1_parsing/040227462_vis.png,./data/MPII_sample1_pose/040227462_rendered.png,cooking or food preparation
+./data/MPII_sample1/018106290.jpg,./data/MPII_sample1_parsing/018106290_vis.png,./data/MPII_sample1_pose/018106290_rendered.png,farming
+./data/MPII_sample1/093272848.jpg,./data/MPII_sample1_parsing/093272848_vis.png,./data/MPII_sample1_pose/093272848_rendered.png,horseback riding
+./data/MPII_sample1/097047665.jpg,./data/MPII_sample1_parsing/097047665_vis.png,./data/MPII_sample1_pose/097047665_rendered.png,"softball, general"
+./data/MPII_sample1/023497340.jpg,./data/MPII_sample1_parsing/023497340_vis.png,./data/MPII_sample1_pose/023497340_rendered.png,tailoring
+./data/MPII_sample1/051021292.jpg,./data/MPII_sample1_parsing/051021292_vis.png,./data/MPII_sample1_pose/051021292_rendered.png,soccer
+./data/MPII_sample1/060577925.jpg,./data/MPII_sample1_parsing/060577925_vis.png,./data/MPII_sample1_pose/060577925_rendered.png,"children_s games, adults playing (e.g., hopscotch, 4-square, dodgeball, playground apparatus, t-ball"
+./data/MPII_sample1/015690262.jpg,./data/MPII_sample1_parsing/015690262_vis.png,./data/MPII_sample1_pose/015690262_rendered.png,"painting,house, furniture, moderate effort"
+./data/MPII_sample1/049715382.jpg,./data/MPII_sample1_parsing/049715382_vis.png,./data/MPII_sample1_pose/049715382_rendered.png,"gardening, general, moderate effort"
+./data/MPII_sample1/037487058.jpg,./data/MPII_sample1_parsing/037487058_vis.png,./data/MPII_sample1_pose/037487058_rendered.png,"sitting, talking in person, on the phone, computer, or text messaging, light effort"
+./data/MPII_sample1/088242121.jpg,./data/MPII_sample1_parsing/088242121_vis.png,./data/MPII_sample1_pose/088242121_rendered.png,"softball, general"
+./data/MPII_sample1/011043186.jpg,./data/MPII_sample1_parsing/011043186_vis.png,./data/MPII_sample1_pose/011043186_rendered.png,"rope skipping, general"
+./data/MPII_sample1/016075990.jpg,./data/MPII_sample1_parsing/016075990_vis.png,./data/MPII_sample1_pose/016075990_rendered.png,"therapeutic exercise ball, Fitball exercise"
+./data/MPII_sample1/029680021.jpg,./data/MPII_sample1_parsing/029680021_vis.png,./data/MPII_sample1_pose/029680021_rendered.png,laying or removing carpet
+./data/MPII_sample1/087024166.jpg,./data/MPII_sample1_parsing/087024166_vis.png,./data/MPII_sample1_pose/087024166_rendered.png,"carpentry, finishing or refinishing cabinets or furniture"
+./data/MPII_sample1/052428598.jpg,./data/MPII_sample1_parsing/052428598_vis.png,./data/MPII_sample1_pose/052428598_rendered.png,backpacking
+./data/MPII_sample1/022578955.jpg,./data/MPII_sample1_parsing/022578955_vis.png,./data/MPII_sample1_pose/022578955_rendered.png,"hunting, general"
+./data/MPII_sample1/000637904.jpg,./data/MPII_sample1_parsing/000637904_vis.png,./data/MPII_sample1_pose/000637904_rendered.png,running
+./data/MPII_sample1/027083225.jpg,./data/MPII_sample1_parsing/027083225_vis.png,./data/MPII_sample1_pose/027083225_rendered.png,laying crushed rock
+./data/MPII_sample1/030320819.jpg,./data/MPII_sample1_parsing/030320819_vis.png,./data/MPII_sample1_pose/030320819_rendered.png,repairing appliances
+./data/MPII_sample1/066196984.jpg,./data/MPII_sample1_parsing/066196984_vis.png,./data/MPII_sample1_pose/066196984_rendered.png,playing with animals
+./data/MPII_sample1/016695309.jpg,./data/MPII_sample1_parsing/016695309_vis.png,./data/MPII_sample1_pose/016695309_rendered.png,"mopping, standing, light effort"
+./data/MPII_sample1/018919579.jpg,./data/MPII_sample1_parsing/018919579_vis.png,./data/MPII_sample1_pose/018919579_rendered.png,horse racing
+./data/MPII_sample1/075549907.jpg,./data/MPII_sample1_parsing/075549907_vis.png,./data/MPII_sample1_pose/075549907_rendered.png,tennis
+./data/MPII_sample1/096141758.jpg,./data/MPII_sample1_parsing/096141758_vis.png,./data/MPII_sample1_pose/096141758_rendered.png,"swimming, lake, ocean, river (Taylor Codes 280, 295)"
+./data/MPII_sample1/017064359.jpg,./data/MPII_sample1_parsing/017064359_vis.png,./data/MPII_sample1_pose/017064359_rendered.png,"canoeing, kayaking, rowing, competitive"
+./data/MPII_sample1/041838953.jpg,./data/MPII_sample1_parsing/041838953_vis.png,./data/MPII_sample1_pose/041838953_rendered.png,"mowing lawn, walk, hand mower (Taylor Code 570)"
+./data/MPII_sample1/058158884.jpg,./data/MPII_sample1_parsing/058158884_vis.png,./data/MPII_sample1_pose/058158884_rendered.png,"carpentry, general"
+./data/MPII_sample1/094218545.jpg,./data/MPII_sample1_parsing/094218545_vis.png,./data/MPII_sample1_pose/094218545_rendered.png,"planting, potting, transplanting seedlings or plants, light effort"
+./data/MPII_sample1/095423136.jpg,./data/MPII_sample1_parsing/095423136_vis.png,./data/MPII_sample1_pose/095423136_rendered.png,horseback riding
+./data/MPII_sample1/093374764.jpg,./data/MPII_sample1_parsing/093374764_vis.png,./data/MPII_sample1_pose/093374764_rendered.png,"drawing, writing, painting, standing"
+./data/MPII_sample1/019528715.jpg,./data/MPII_sample1_parsing/019528715_vis.png,./data/MPII_sample1_pose/019528715_rendered.png,"ski machine, general"
+./data/MPII_sample1/003941759.jpg,./data/MPII_sample1_parsing/003941759_vis.png,./data/MPII_sample1_pose/003941759_rendered.png,"swimming, general"
+./data/MPII_sample1/030095772.jpg,./data/MPII_sample1_parsing/030095772_vis.png,./data/MPII_sample1_pose/030095772_rendered.png,resistance training
+./data/MPII_sample1/068222638.jpg,./data/MPII_sample1_parsing/068222638_vis.png,./data/MPII_sample1_pose/068222638_rendered.png,"bicycling, BMX"
+./data/MPII_sample1/018281339.jpg,./data/MPII_sample1_parsing/018281339_vis.png,./data/MPII_sample1_pose/018281339_rendered.png,"chambermaid, hotel housekeeper, making bed, cleaning bathroom, pushing cart"
+./data/MPII_sample1/082125942.jpg,./data/MPII_sample1_parsing/082125942_vis.png,./data/MPII_sample1_pose/082125942_rendered.png,"copying documents, standing"
+./data/MPII_sample1/006337497.jpg,./data/MPII_sample1_parsing/006337497_vis.png,./data/MPII_sample1_pose/006337497_rendered.png,calisthenics
+./data/MPII_sample1/015478603.jpg,./data/MPII_sample1_parsing/015478603_vis.png,./data/MPII_sample1_pose/015478603_rendered.png,calisthenics
+./data/MPII_sample1/073750125.jpg,./data/MPII_sample1_parsing/073750125_vis.png,./data/MPII_sample1_pose/073750125_rendered.png,"chambermaid, hotel housekeeper, making bed, cleaning bathroom, pushing cart"
+./data/MPII_sample1/055901089.jpg,./data/MPII_sample1_parsing/055901089_vis.png,./data/MPII_sample1_pose/055901089_rendered.png,rock climbing
+./data/MPII_sample1/092239803.jpg,./data/MPII_sample1_parsing/092239803_vis.png,./data/MPII_sample1_pose/092239803_rendered.png,reclining
+./data/MPII_sample1/043099334.jpg,./data/MPII_sample1_parsing/043099334_vis.png,./data/MPII_sample1_pose/043099334_rendered.png,"cricket, batting, bowling, fielding"
+./data/MPII_sample1/013740987.jpg,./data/MPII_sample1_parsing/013740987_vis.png,./data/MPII_sample1_pose/013740987_rendered.png,rock climbing
+./data/MPII_sample1/003373011.jpg,./data/MPII_sample1_parsing/003373011_vis.png,./data/MPII_sample1_pose/003373011_rendered.png,golf
+./data/MPII_sample1/069316936.jpg,./data/MPII_sample1_parsing/069316936_vis.png,./data/MPII_sample1_pose/069316936_rendered.png,"laying tile or linoleum,repairing appliances"
+./data/MPII_sample1/043964232.jpg,./data/MPII_sample1_parsing/043964232_vis.png,./data/MPII_sample1_pose/043964232_rendered.png,"active workstation, treadmill desk, walking"
+./data/MPII_sample1/008701722.jpg,./data/MPII_sample1_parsing/008701722_vis.png,./data/MPII_sample1_pose/008701722_rendered.png,"fishing, catching fish with hands"
+./data/MPII_sample1/093025432.jpg,./data/MPII_sample1_parsing/093025432_vis.png,./data/MPII_sample1_pose/093025432_rendered.png,"active workstation, treadmill desk, walking"
+./data/MPII_sample1/015620151.jpg,./data/MPII_sample1_parsing/015620151_vis.png,./data/MPII_sample1_pose/015620151_rendered.png,"rowing, stationary"
+./data/MPII_sample1/036975251.jpg,./data/MPII_sample1_parsing/036975251_vis.png,./data/MPII_sample1_pose/036975251_rendered.png,"canoeing, on camping trip (Taylor Code 270)"
+./data/MPII_sample1/094197443.jpg,./data/MPII_sample1_parsing/094197443_vis.png,./data/MPII_sample1_pose/094197443_rendered.png,"yoga, Nadisodhana"
+./data/MPII_sample1/010621383.jpg,./data/MPII_sample1_parsing/010621383_vis.png,./data/MPII_sample1_pose/010621383_rendered.png,sanding floors with a power sander

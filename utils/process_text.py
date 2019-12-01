@@ -6,15 +6,13 @@ from nltk.tokenize import punkt
 import torch
 import numpy as np
 
-WORD2VEC_PATH = 'd:/data/GoogleNews-vectors-negative300.bin'
-
+WORD2VEC_PATH = '~/Desktop/coms_4995/human-pose-synthesis/data/GoogleNews-vectors-negative300.bin'
 
 def tokenizer(doc):
     return [t.lower() for t in word_tokenize(doc) if t not in string.punctuation]
 
-
 def get_embeddings(word2idx, wv):
-    embeddings = np.zeros((len(word2idx) + 1, 300))
+    embeddings = np.zeros((len(word2idx)+1, 300))
     for word, i in word2idx.items():
         if word == '<pad>':
             pass
@@ -24,7 +22,6 @@ def get_embeddings(word2idx, wv):
             embeddings[i] = wv[word]
     embeddings = torch.tensor(embeddings)
     return embeddings
-
 
 def get_word2idx(annotation_list):
     wv = KeyedVectors.load_word2vec_format(WORD2VEC_PATH, binary=True)
