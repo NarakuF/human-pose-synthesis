@@ -1,23 +1,14 @@
-import cv2
-import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
-
 import torch
-import torchvision
 import torch.nn as nn
-import torch.nn.functional as F
-from torch.utils.data import Dataset, DataLoader
-from torchvision import transforms, utils
-from torchvision import models
+from torch.utils.data import DataLoader
+from torchvision import transforms
 import torch.optim as optim
-
-from utils.process_img import Rescale, DynamicCrop, ToTensor, CenterCrop
+from utils.process_img import Rescale, DynamicCrop
 from utils.func import weights_init
-from pose_dataset import PoseDataset, print_sample
-from model.generator import PoseGenerator
-from model.discriminator import PoseDiscriminator
-
+from pose_dataset import PoseDataset
+from model.generator import PoseGeneratorDC
+from model.discriminator import PoseDiscriminatorDC
 
 if __name__ == "__main__":
     composed = transforms.Compose([Rescale(512),
@@ -30,10 +21,10 @@ if __name__ == "__main__":
     embeddings = pose_dataset.embeddings
 
     # Generator
-    netG = PoseGenerator(embeddings).cuda()
+    netG = PoseGeneratorDC(embeddings).cuda()
     netG.apply(weights_init)
     # Discriminator
-    netD = PoseDiscriminator(embeddings).cuda()
+    netD = PoseDiscriminatorDC(embeddings).cuda()
     netD.apply(weights_init)
 
     # Settings:
