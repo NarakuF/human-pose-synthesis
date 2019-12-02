@@ -1,30 +1,11 @@
 import torch
-import torchvision
 import torch.nn as nn
 import torch.nn.functional as F
 from torchvision import models
-
-img_shape = (3, 64, 64)
-opt = {'b1': 0.5, 
-       'b2': 0.999, 
-       'batch_size': 64, 
-       'channels': 1, 
-       'img_size': 32, 
-       'latent_dim': 100, 
-       'lr': 0.0002, 
-       'n_classes': 200, 
-       'n_cpu': 8, 
-       'n_epochs': 1, 
-       'sample_interval': 400}
-
-
-def create_emb_layer(embeddings, non_trainable=False):
-    num_embeddings, embedding_dim = embeddings.size()
-    emb_layer = nn.Embedding(num_embeddings, embedding_dim)
-    emb_layer.load_state_dict({'weight': embeddings})
-    if non_trainable:
-        emb_layer.weight.requires_grad = False
-    return emb_layer
+import numpy as np
+from model.utils import img_shape
+from model.utils import opt
+from model.utils import create_emb_layer
 
 
 class Discriminator(nn.Module):
@@ -56,7 +37,7 @@ class Discriminator(nn.Module):
 
 class DiscriminatorDC(nn.Module):
     def __init__(self):
-        super(Discriminator, self).__init__()
+        super(DiscriminatorDC, self).__init__()
         nc = 3
         ndf = 64
         self.main = nn.Sequential(
@@ -88,6 +69,7 @@ class DiscriminatorDC(nn.Module):
         x = self.main(input)
         return x
 
+
 class PoseDiscriminatorL(nn.Module):
     def __init__(self):
         super(PoseDiscriminatorL, self).__init__()
@@ -100,17 +82,18 @@ class PoseDiscriminatorL(nn.Module):
         x = self.fc_1(x)
         return x
 
+
 class PoseDiscriminatorDC(nn.Module):
     def __init__(self, embeddings):
         super(PoseDiscriminatorDC, self).__init__()
-        self.annotate_embed_size = 32   # output encoded annotation size
-        self.output_size = 128          # output image representation size after going through CNN
+        self.annotate_embed_size = 32  # output encoded annotation size
+        self.output_size = 128  # output image representation size after going through CNN
         self.emb_layer = create_emb_layer(embeddings, non_trainable=True)
-        self.rnn = nn.LSTM(input_size = embeddings.size()[1], 
-                           hidden_size = self.annotate_embed_size, 
-                           num_layers = 2,
-                           batch_first = True,
-                           bidirectional = True)
+        self.rnn = nn.LSTM(input_size=embeddings.size()[1],
+                           hidden_size=self.annotate_embed_size,
+                           num_layers=2,
+                           batch_first=True,
+                           bidirectional=True)
         ndf = 64
         nc = 3
         self.main = nn.Sequential(
@@ -149,7 +132,7 @@ class PoseDiscriminatorDC(nn.Module):
 
         embed_annotate = self.emb_layer(annotate)
         x, hidden = self.rnn(embed_annotate)
-        encoded_annotate = x[:,0,:]+x[:,-1,:]
+        encoded_annotate = x[:, 0, :] + x[:, -1, :]
 
         x = self.main(image)
         encoded_img = x.view(batch_size, -1)
@@ -160,7 +143,3 @@ class PoseDiscriminatorDC(nn.Module):
         x = F.relu(self.norm_2(self.fc_2(x)))
         x = self.fc_3(x)
         return x
-
-
-
-

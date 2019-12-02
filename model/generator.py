@@ -1,29 +1,9 @@
 import torch
-import torchvision
 import torch.nn as nn
-import torch.nn.functional as F
 import numpy as np
-
-img_shape = (3, 64, 64)
-opt = {'b1': 0.5, 
-       'b2': 0.999, 
-       'batch_size': 64, 
-       'channels': 1, 
-       'img_size': 32, 
-       'latent_dim': 100, 
-       'lr': 0.0002, 
-       'n_classes': 200, 
-       'n_cpu': 8, 
-       'n_epochs': 1, 
-       'sample_interval': 400}
-
-def create_emb_layer(embeddings, non_trainable=False):
-    num_embeddings, embedding_dim = embeddings.size()
-    emb_layer = nn.Embedding(num_embeddings, embedding_dim)
-    emb_layer.load_state_dict({'weight': embeddings})
-    if non_trainable:
-        emb_layer.weight.requires_grad = False
-    return emb_layer
+from model.utils import img_shape
+from model.utils import opt
+from model.utils import create_emb_layer
 
 
 class Generator(nn.Module):
@@ -56,29 +36,30 @@ class Generator(nn.Module):
         img = img.view(img.size(0), *img_shape)
         return img
 
+
 class PoseGeneratorDC(nn.Module):
     def __init__(self, embeddings):
         super(PoseGeneratorDC, self).__init__()
-        self.annotate_embed_size = 128 	# output encoded annotation size
-        self.z_size = 16 				# 初始的noise size
+        self.annotate_embed_size = 128  # output encoded annotation size
+        self.z_size = 16  # 初始的noise size
         self.emb_layer = create_emb_layer(embeddings, non_trainable=True)
-        self.rnn = nn.LSTM(input_size = embeddings.size()[1], 
-                           hidden_size = self.annotate_embed_size, 
-                           num_layers = 2,
-                           batch_first = True,
-                           bidirectional = True)
+        self.rnn = nn.LSTM(input_size=embeddings.size()[1],
+                           hidden_size=self.annotate_embed_size,
+                           num_layers=2,
+                           batch_first=True,
+                           bidirectional=True)
 
-        ngf = 64						 # number of feature for the image
+        ngf = 64  # number of feature for the image
         nc = 3
-        in_feature_size = self.annotate_embed_size*2 + self.z_size  # *2因为bidirectional
+        in_feature_size = self.annotate_embed_size * 2 + self.z_size  # *2因为bidirectional
 
         self.main = nn.Sequential(
             # input is Z, going into a convolution
-            nn.ConvTranspose2d( in_feature_size, ngf * 16, 4, 1, 0, bias=False),
+            nn.ConvTranspose2d(in_feature_size, ngf * 16, 4, 1, 0, bias=False),
             nn.BatchNorm2d(ngf * 16),
             nn.ReLU(True),
             # state size. (ngf*8) x 4 x 4
-            nn.ConvTranspose2d( ngf * 16, ngf * 8, 4, 2, 1, bias=False),
+            nn.ConvTranspose2d(ngf * 16, ngf * 8, 4, 2, 1, bias=False),
             nn.BatchNorm2d(ngf * 8),
             nn.ReLU(True),
             # state size. (ngf*8) x 4 x 4
@@ -86,24 +67,24 @@ class PoseGeneratorDC(nn.Module):
             nn.BatchNorm2d(ngf * 4),
             nn.ReLU(True),
             # state size. (ngf*4) x 8 x 8
-            nn.ConvTranspose2d( ngf * 4, ngf * 2, 4, 2, 1, bias=False),
+            nn.ConvTranspose2d(ngf * 4, ngf * 2, 4, 2, 1, bias=False),
             nn.BatchNorm2d(ngf * 2),
             nn.ReLU(True),
             # state size. (ngf*2) x 16 x 16
-            nn.ConvTranspose2d( ngf * 2, ngf, 4, 2, 1, bias=False),
+            nn.ConvTranspose2d(ngf * 2, ngf, 4, 2, 1, bias=False),
             nn.BatchNorm2d(ngf),
             nn.ReLU(True),
             # state size. (ngf) x 32 x 32
-            nn.ConvTranspose2d( ngf, nc, 4, 2, 1, bias=False),
+            nn.ConvTranspose2d(ngf, nc, 4, 2, 1, bias=False),
             nn.Tanh()
             # state size. (nc) x 64 x 64
         )
-        
+
     def forward(self, noise, annotate):
         # Get the encoded annotation from RNN
         embed_annotate = self.emb_layer(annotate)
         x, hidden = self.rnn(embed_annotate)
-        encoded_x = x[:,0,:]+x[:,-1,:]
+        encoded_x = x[:, 0, :] + x[:, -1, :]
         encoded_annotate = torch.reshape(encoded_x, (-1, encoded_x.shape[1], 1, 1))
 
         input_x = torch.cat((encoded_annotate, noise), 1)
@@ -112,14 +93,16 @@ class PoseGeneratorDC(nn.Module):
 
 class GeneratorDC(nn.Module):
     def __init__(self):
-        super(Generator, self).__init__()
+        super(GeneratorDC, self).__init__()
+        ngf = 64  # number of feature for the image
+        nc = 3
         self.main = nn.Sequential(
             # input is Z, going into a convolution
-            nn.ConvTranspose2d( nz, ngf * 16, 4, 1, 0, bias=False),
+            nn.ConvTranspose2d(nc, ngf * 16, 4, 1, 0, bias=False),
             nn.BatchNorm2d(ngf * 16),
             nn.ReLU(True),
             # state size. (ngf*8) x 4 x 4
-            nn.ConvTranspose2d( ngf * 16, ngf * 8, 4, 2, 1, bias=False),
+            nn.ConvTranspose2d(ngf * 16, ngf * 8, 4, 2, 1, bias=False),
             nn.BatchNorm2d(ngf * 8),
             nn.ReLU(True),
             # state size. (ngf*8) x 4 x 4
@@ -127,15 +110,15 @@ class GeneratorDC(nn.Module):
             nn.BatchNorm2d(ngf * 4),
             nn.ReLU(True),
             # state size. (ngf*4) x 8 x 8
-            nn.ConvTranspose2d( ngf * 4, ngf * 2, 4, 2, 1, bias=False),
+            nn.ConvTranspose2d(ngf * 4, ngf * 2, 4, 2, 1, bias=False),
             nn.BatchNorm2d(ngf * 2),
             nn.ReLU(True),
             # state size. (ngf*2) x 16 x 16
-            nn.ConvTranspose2d( ngf * 2, ngf, 4, 2, 1, bias=False),
+            nn.ConvTranspose2d(ngf * 2, ngf, 4, 2, 1, bias=False),
             nn.BatchNorm2d(ngf),
             nn.ReLU(True),
             # state size. (ngf) x 32 x 32
-            nn.ConvTranspose2d( ngf, nc, 4, 2, 1, bias=False),
+            nn.ConvTranspose2d(ngf, nc, 4, 2, 1, bias=False),
             nn.Tanh()
             # state size. (nc) x 64 x 64
         )
