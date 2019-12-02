@@ -9,15 +9,17 @@ from torch.utils.data import Dataset
 from skimage.color import rgb2gray
 from utils.process_text import get_embeddings, get_word2idx
 
-TEXT_FEATURE = './intermediate/text_feature.pk'
+TEXT_FEATURE = 'd:/github/NarakuF/human-pose-synthesis/intermediate/text_feature.pk'
 
 
 class PoseDataset(Dataset):
-    def __init__(self, csv_file, root_dir, transform=None, brand_new=False, gray_scale=False, label=True):
+    def __init__(self, csv_file, root_dir, transform=None, brand_new=False, gray_scale=False,
+                 text_only=False, label=True):
         self.data_list = pd.read_csv(csv_file)
         self.root_dir = root_dir
         self.transform = transform
         self.gray_scale = gray_scale
+        self.text_only = text_only
         self.label = label
         # Parsing text:
         if brand_new or not os.path.exists(TEXT_FEATURE):
@@ -29,7 +31,7 @@ class PoseDataset(Dataset):
                                tokens]) for tokens in self.annotations])
             save_file = {'annotations': self.annotations, 'word2idx': self.word2idx, 'embeddings': self.embeddings,
                          'padded_annotate': self.padded_annotate}
-            with open(TEXT_FEATURE, 'wb') as f:
+            with open(TEXT_FEATURE, 'wb+') as f:
                 pickle.dump(save_file, f)
         else:
             with open(TEXT_FEATURE, 'rb') as f:
@@ -44,6 +46,14 @@ class PoseDataset(Dataset):
 
     def __getitem__(self, idx):
         data_instance = self.data_list.iloc[idx]
+
+        if self.text_only:
+            annotate = self.padded_annotate[:, idx]
+            sample = {'annotate': annotate}
+            if self.label:
+                sample['label'] = data_instance['label']
+            return sample
+
         raw = cv2.imread(data_instance['raw'])
         raw = cv2.cvtColor(raw, cv2.COLOR_BGR2RGB)
         parsing = cv2.imread(data_instance['parsing'])

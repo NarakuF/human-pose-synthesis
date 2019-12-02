@@ -1,11 +1,9 @@
-import nltk
 import string
 from gensim.models import KeyedVectors
 from nltk.tokenize import word_tokenize
 import torch
 import numpy as np
-
-WORD2VEC_PATH = '~/Desktop/coms_4995/human-pose-synthesis/data/GoogleNews-vectors-negative300.bin'
+from utils.utils import WORD2VEC_PATH
 
 
 def tokenizer(doc):

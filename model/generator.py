@@ -1,9 +1,9 @@
 import torch
 import torch.nn as nn
 import numpy as np
-from model.utils import img_shape
-from model.utils import opt
-from model.utils import create_emb_layer
+from utils.utils import img_shape
+from utils.utils import opt
+from utils.utils import create_emb_layer
 
 
 class Generator(nn.Module):

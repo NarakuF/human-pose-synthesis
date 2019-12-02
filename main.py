@@ -5,7 +5,7 @@ from torch.utils.data import DataLoader
 from torchvision import transforms
 import torch.optim as optim
 from utils.process_img import Rescale, DynamicCrop
-from utils.func import weights_init
+from utils.utils import weights_init
 from pose_dataset import PoseDataset
 from model.generator import PoseGeneratorDC
 from model.discriminator import PoseDiscriminatorDC
@@ -15,7 +15,7 @@ if __name__ == "__main__":
                                    DynamicCrop(30),
                                    Rescale((128, 128))])
 
-    pose_dataset = PoseDataset('./data/data_list.csv', './data', transform=composed)
+    pose_dataset = PoseDataset('./data/data_list_label.csv', './data', transform=composed)
     pose_dataloader = DataLoader(pose_dataset, batch_size=10, shuffle=True, num_workers=4)
 
     embeddings = pose_dataset.embeddings

@@ -14,7 +14,7 @@ import torch.optim as optim
 from torch.autograd import Variable
 
 from utils.process_img import Rescale, DynamicCrop, ToTensor, CenterCrop
-from utils.func import weights_init
+from utils.utils import weights_init
 from pose_dataset import PoseDataset, print_sample
 from model.generator import PoseGeneratorDC, PoseGeneratorL, Generator
 from model.discriminator import PoseDiscriminatorDC, Discriminator
@@ -31,29 +31,29 @@ from IPython.display import HTML
 from model.vae import *
 
 
-config = {'batch_size': 32, 
-          'num_epochs': 100, 
-          'num_samples': 64, 
-          'num_every_nth_epoch': 1, 
-          'num_gpus': 1, 
-          'num_workers': 0, 
-          'ckpt': False, 
-          'ckpt_path': 'ckpt', 
-          'data_path': 'data', 
-          'img_path': 'img', 
-          'output_path': '', 
-          'dataset': 'mnist', 
-          'training_digits': 0, 
-          'z_dim': 256, 
-          'lr_adam': 0.001, 
-          'beta_1': 0.5, 
-          'beta_2': 0.999, 
-          'std': 0.02, 
-          'num_filters_in_final_layer': 128, 
-          'num_conv_layers': 4, 
-          'model': 'vae', 
-          'img_size': 64, 
-          'num_channels': 1, 
+config = {'batch_size': 32,
+          'num_epochs': 100,
+          'num_samples': 64,
+          'num_every_nth_epoch': 1,
+          'num_gpus': 1,
+          'num_workers': 0,
+          'ckpt': False,
+          'ckpt_path': 'ckpt',
+          'data_path': 'data',
+          'img_path': 'img',
+          'output_path': '',
+          'dataset': 'mnist',
+          'training_digits': 0,
+          'z_dim': 256,
+          'lr_adam': 0.001,
+          'beta_1': 0.5,
+          'beta_2': 0.999,
+          'std': 0.02,
+          'num_filters_in_final_layer': 128,
+          'num_conv_layers': 4,
+          'model': 'vae',
+          'img_size': 64,
+          'num_channels': 1,
           'c_dim': [128, 4, 4]}
 
 img_size = 64
@@ -94,7 +94,7 @@ for epoch in range(num_epoch):
         loss.backward()
         v_optim.step()
         running_loss.append(loss.item())
-    
+
     print("Epoch", epoch, "- Running Loss:", np.mean(running_loss))
 
 
@@ -108,7 +108,7 @@ for epoch in range(num_epoch):
 
 #     img = torch.reshape(x, (64, 64)).cpu().detach().numpy()
 #     img_r = torch.reshape(x_r, (64, 64)).cpu().detach().numpy()
-    
+
 #     fig = plt.figure(figsize=(5,5))
 #     fig.add_subplot(1,2,1)
 #     plt.imshow(img)
