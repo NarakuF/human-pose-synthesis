@@ -13,6 +13,7 @@ from torch.utils.data import Dataset, DataLoader
 from torchvision import transforms, utils
 from torchvision import models
 import torch.optim as optim
+from skimage.color import rgb2gray
 
 from skimage import io, transform
 from utils.process_img import Rescale, DynamicCrop, ToTensor
@@ -21,11 +22,12 @@ from utils.process_text import tokenizer, get_embeddings, get_word2idx
 TEXT_FEATURE = './intermediate/text_feature.pk'
 
 class PoseDataset(Dataset):
-    def __init__(self, csv_file, root_dir, transform = None, brand_new = False):
+    def __init__(self, csv_file, root_dir, transform = None, brand_new = False, gray_scale = False, label = True):
         self.data_list = pd.read_csv(csv_file)
         self.root_dir = root_dir
         self.transform = transform
-
+        self.gray_scale = gray_scale
+        self.label = label
         # Parsing text:
         if brand_new or not os.path.exists(TEXT_FEATURE):
             annotation_list = list(self.data_list['annotate'])
@@ -33,12 +35,13 @@ class PoseDataset(Dataset):
             self.embeddings = get_embeddings(self.word2idx, wv)
             self.padded_annotate = nn.utils.rnn.pad_sequence([torch.tensor([self.word2idx[word] if word in self.word2idx else self.word2idx['<unk>'] for word in
                                                      tokens]) for tokens in self.annotations])
-            save_file = {'word2idx': self.word2idx, 'embeddings': self.embeddings, 'padded_annotate': self.padded_annotate}
+            save_file = {'annotations': self.annotations, 'word2idx': self.word2idx, 'embeddings': self.embeddings, 'padded_annotate': self.padded_annotate}
             with open(TEXT_FEATURE, 'wb') as f:
                 pickle.dump(save_file, f)
         else:
             with open(TEXT_FEATURE, 'rb') as f:
                 save_file = pickle.load(f)
+            self.annotations = save_file['annotations']
             self.word2idx = save_file['word2idx']
             self.embeddings = save_file['embeddings']
             self.padded_annotate = save_file['padded_annotate']
@@ -57,10 +60,19 @@ class PoseDataset(Dataset):
         sample = {'raw': raw, 'parsing': parsing, 'pose': pose, 'annotate': annotate}
         if self.transform:
             sample = self.transform(sample)
+
+        if self.gray_scale:
+            sample['parsing'] = rgb2gray(sample['parsing'])
+            sample['pose'] = rgb2gray(sample['pose'])
+
+        if self.label:
+            sample['label'] = data_instance['label']
         return sample
-    
+
+
+ 
 def print_sample(sample):
-    print(sample['annotate'])
+    #print(sample['annotate'])
     fig = plt.figure(figsize=(10, 10))
     for i in range(3):
         fig.add_subplot(1,3,i+1)

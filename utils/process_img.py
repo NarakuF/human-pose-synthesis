@@ -57,8 +57,6 @@ class DynamicCrop(object):
         new_down = min(h, new_up + new_h + 2*padding_h)
         new_left = max(0, left - padding_w)
         new_right = min(w, new_left + new_w + 2*padding_w)
-        new_h = new_down - new_up
-        new_w = new_right - new_left
 
         img = img[new_up:new_down, new_left:new_right]
         raw = raw[new_up:new_down, new_left:new_right]
