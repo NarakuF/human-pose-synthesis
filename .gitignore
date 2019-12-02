@@ -112,3 +112,4 @@ imgs/
 data/MPII*
 *.json
 *.pk
+*.pth
