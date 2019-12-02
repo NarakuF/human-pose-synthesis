@@ -45,8 +45,8 @@ class DynamicCrop(object):
             non_zero = np.argwhere(img[:, :, i] > 0)
             row = [n[0] for n in non_zero]
             col = [n[1] for n in non_zero]
-            up, down = min(min(row), up), max(max(row), down)
-            left, right = min(min(col), left), max(max(col), right)
+            up, down = min(min(row, default=0), up), max(max(row, default=0), down)
+            left, right = min(min(col, default=0), left), max(max(col, default=0), right)
 
         new_h, new_w = down - up, right - left
         if new_h > new_w:
@@ -87,8 +87,8 @@ class CenterCrop(object):
         non_zero = np.argwhere(img[:, :, 1] > 0)
         row = [n[0] for n in non_zero]
         col = [n[1] for n in non_zero]
-        up, down = min(row), max(row)
-        left, right = min(col), max(col)
+        up, down = min(row, default=0), max(row, default=0)
+        left, right = min(col, default=0), max(col, default=0)
         center_h, center_w = (up + down) // 2, (left + right) // 2
         new_h, new_w = self.output_size
 
