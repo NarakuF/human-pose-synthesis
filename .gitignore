@@ -109,3 +109,6 @@ models/checkpoints/
 results/
 imgs/
 .DS_Store
+data/MPII*
+*.json
+*.pk
