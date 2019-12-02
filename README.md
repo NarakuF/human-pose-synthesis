@@ -6,8 +6,11 @@ This repo implements Unsupervised Person Image Generation with Semantic Parsing 
 Install all dependencies in `requrements.txt`.
 
 ### Content
+* `data`: precessed MPII csv data.
+* `model`: implementation of various neural networks.
 * `person_generation`: use per-trained model to generate pose-guided human synthesis images.
 * `preprocess`: preprocess the data, obtains the keypoints information.
+* `utils`: some helper methods.
 
 ### Reference
 
