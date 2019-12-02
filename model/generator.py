@@ -56,6 +56,7 @@ class Generator(nn.Module):
         img = img.view(img.size(0), *img_shape)
         return img
 
+
 class PoseGeneratorDC(nn.Module):
     def __init__(self, embeddings):
         super(PoseGeneratorDC, self).__init__()
@@ -104,8 +105,8 @@ class PoseGeneratorDC(nn.Module):
         embed_annotate = self.emb_layer(annotate)
         x, hidden = self.rnn(embed_annotate)
         encoded_x = x[:,0,:]+x[:,-1,:]
-        encoded_annotate = torch.reshape(encoded_x, (-1, encoded_x.shape[1], 1, 1))
 
+        encoded_annotate = torch.reshape(encoded_x, (-1, encoded_x.shape[1], 1, 1))
         input_x = torch.cat((encoded_annotate, noise), 1)
         return self.main(input_x)
 

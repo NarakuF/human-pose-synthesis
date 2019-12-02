@@ -4,6 +4,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torchvision import models
 
+
 img_shape = (3, 64, 64)
 opt = {'b1': 0.5, 
        'b2': 0.999, 
@@ -100,6 +101,7 @@ class PoseDiscriminatorL(nn.Module):
         x = self.fc_1(x)
         return x
 
+
 class PoseDiscriminatorDC(nn.Module):
     def __init__(self, embeddings):
         super(PoseDiscriminatorDC, self).__init__()
@@ -159,8 +161,5 @@ class PoseDiscriminatorDC(nn.Module):
         x = F.relu(self.norm_1(self.fc_1(fc_input)))
         x = F.relu(self.norm_2(self.fc_2(x)))
         x = self.fc_3(x)
+
         return x
-
-
-
-
