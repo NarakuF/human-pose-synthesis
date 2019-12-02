@@ -64,12 +64,14 @@ class PoseDataset(Dataset):
         if self.gray_scale:
             sample['parsing'] = rgb2gray(sample['parsing'])
             sample['pose'] = rgb2gray(sample['pose'])
+
+        sample['label'] = data_instance['label']
         return sample
 
 
  
 def print_sample(sample):
-    print(sample['annotate'])
+    #print(sample['annotate'])
     fig = plt.figure(figsize=(10, 10))
     for i in range(3):
         fig.add_subplot(1,3,i+1)
