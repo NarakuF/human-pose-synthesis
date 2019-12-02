@@ -22,12 +22,12 @@ from utils.process_text import tokenizer, get_embeddings, get_word2idx
 TEXT_FEATURE = './intermediate/text_feature.pk'
 
 class PoseDataset(Dataset):
-    def __init__(self, csv_file, root_dir, transform = None, brand_new = False, gray_scale = False):
+    def __init__(self, csv_file, root_dir, transform = None, brand_new = False, gray_scale = False, label = True):
         self.data_list = pd.read_csv(csv_file)
         self.root_dir = root_dir
         self.transform = transform
         self.gray_scale = gray_scale
-
+        self.label = label
         # Parsing text:
         if brand_new or not os.path.exists(TEXT_FEATURE):
             annotation_list = list(self.data_list['annotate'])
@@ -65,7 +65,8 @@ class PoseDataset(Dataset):
             sample['parsing'] = rgb2gray(sample['parsing'])
             sample['pose'] = rgb2gray(sample['pose'])
 
-        sample['label'] = data_instance['label']
+        if self.label:
+            sample['label'] = data_instance['label']
         return sample
 
 
