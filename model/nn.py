@@ -7,6 +7,7 @@ from utils.utils import create_emb_layer
 from pose_dataset import PoseDataset
 import matplotlib.pyplot as plt
 import numpy as np
+from numpy import random
 
 
 class ActivityClassifier(nn.Module):
@@ -44,9 +45,26 @@ def anno2padded(anno, dataset):
     return padded
 
 
-if __name__ == "__main__":
-    dataset = PoseDataset('../data/data_list_label.csv', '../data', text_only=True)
+def normalize_res(res):
+    normalized = torch.squeeze(res.detach().cpu())
+    normalized = normalized.numpy()
+    normalized = np.exp(normalized)
+    normalized = normalized / np.sum(normalized)
+    return normalized
 
+
+def get_label(probs):
+    rand_prob = random.random()
+    prob = 0.0
+    for i, p in enumerate(probs):
+        prob += p
+        if rand_prob < prob:
+            return i
+    return -1
+
+
+if __name__ == "__main__":
+    dataset = PoseDataset('../data/data_list_50.csv', '../data', text_only=True)
     dataloader = DataLoader(dataset, batch_size=16, shuffle=True, num_workers=4)
 
     '''embeddings = dataset.embeddings
@@ -79,11 +97,11 @@ if __name__ == "__main__":
                 print('[epoch %d][idx %d]\tLoss: %.4f'
                       % (epoch + 1, i + 1, loss.item()))
 
-    torch.save(model, './classifier.pth')'''
+    torch.save(model, './classifier_50.pth')'''
 
-    model = torch.load('./classifier.pth')
+    model = torch.load('./classifier_50.pth')
 
-    model.eval()
+    '''model.eval()
     correct = 0
     with torch.no_grad():
         for i, sample in enumerate(dataloader):
@@ -94,24 +112,20 @@ if __name__ == "__main__":
             correct += (idx == y_sample).sum().item()
 
     print(correct)
-    print(correct / len(dataset))
+    print(correct / len(dataset))'''
 
-
-
-
-    '''
     s = 'golf'
     s = anno2padded(s, dataset)
-    y = model(s)
-    res = torch.squeeze(y.detach().cpu())
-    res = res.numpy()
-    res = np.exp(res)
-    res = res / np.sum(res)
-    plt.bar(np.arange(200), np.sort(res)[::-1])
+    with torch.no_grad():
+        y = model(s)
+    res = normalize_res(y)
+
+    # plt.bar(np.arange(50), np.sort(res)[::-1])
+    # plt.show()
     print(np.sum(res))
     print(np.max(res))
     print(np.min(res))
     print(np.mean(res))
-    plt.show()
-    max_y, label = torch.max(y, 1)
-    print(label.item())'''
+
+    label = get_label(res)
+    print(label)

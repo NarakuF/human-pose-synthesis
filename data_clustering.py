@@ -1,18 +1,14 @@
-
 import cv2
 import pickle
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-
 import torch
 from torch.utils.data import DataLoader
 from torchvision import transforms
 from utils.process_img import Rescale, DynamicCrop
 from pose_dataset import PoseDataset
-
 from tqdm.notebook import tqdm
-
 from sklearn.cluster import KMeans
 
 
