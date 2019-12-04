@@ -1,8 +1,0 @@
-{
-  "seed": 1,
-  "original_file": "./list_eval_partition.txt",
-  "experiment_file": "./list_experiment.txt",
-  "train": 10000,
-  "query": 2000,
-  "gallery": 2000
-}
