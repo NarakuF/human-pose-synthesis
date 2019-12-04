@@ -12,6 +12,9 @@ Install all dependencies in `requrements.txt`.
 * `data`: processed MPII csv data.
 * `model`: implementation of various neural networks, including annotation classifier, and conditional GAN.
 * `utils`: some helper methods to process images and texts.
+* `main.py`: main code to run the whole pipeline.
+* `pose_dataset.py`: customized dataset and dataloader using PyTorch.
+* `train*`: training code for different neural networks.
 
 ## References and Related Projects
 * [Unsupervised Person Image Generation with Semantic Parsing Transformation](<https://github.com/SijieSong/person_generation_spt>)
