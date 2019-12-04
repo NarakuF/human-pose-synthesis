@@ -99,7 +99,7 @@ for epoch in range(n_epochs):
         optimizer_G_pose.zero_grad()
         gen_parsing = generator_parsing(z, gen_labels)
         gen_pose = generator_pose(z, gen_labels)
-        loss_consistency = consistency_loss(gen_parsing, gen_pose)    
+        loss_consistency = -consistency_loss(gen_parsing, gen_pose)    
         validity_pose = discriminator_pose(gen_pose, gen_labels)
         g_loss_pose = adversarial_loss(validity_pose.view(-1), valid)
         g_loss_pose = (g_loss_pose + loss_consistency) / 2
@@ -110,7 +110,7 @@ for epoch in range(n_epochs):
         optimizer_G_parsing.zero_grad()
         gen_parsing = generator_parsing(z, gen_labels)
         gen_pose = generator_pose(z, gen_labels)
-        loss_consistency = consistency_loss(gen_parsing, gen_pose)
+        loss_consistency = -consistency_loss(gen_parsing, gen_pose)
         validity_parsing = discriminator_parsing(gen_parsing, gen_labels)
         g_loss_parsing = adversarial_loss(validity_parsing.view(-1), valid)
         g_loss_parsing = (g_loss_parsing + loss_consistency) / 2
