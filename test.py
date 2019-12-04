@@ -26,6 +26,7 @@ mydevice = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # Load Model:
 print("Loading Model...")
 classifier = torch.load('./intermediate/classifier_200.pth')
+classifier.to(device = mydevice)
 netG_pose = torch.load('./intermediate/pose_netG_uni.pth')
 netG_pose.to(device = mydevice)
 netG_parsing = torch.load('./intermediate/parsing_netG_uni.pth')
