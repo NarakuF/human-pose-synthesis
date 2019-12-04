@@ -18,7 +18,8 @@ Install all dependencies in `requrements.txt`.
 
 ## References and Related Projects
 * [Unsupervised Person Image Generation with Semantic Parsing Transformation](<https://github.com/SijieSong/person_generation_spt>)
-* [LIP_JPPNet](<https://github.com/Engineering-Course/LIP_JPPNet>)
 * [OpenPose](<https://github.com/CMU-Perceptual-Computing-Lab/openpose>)
 * [Detectron2](<https://github.com/facebookresearch/detectron2>)
+* [LIP_JPPNet](<https://github.com/Engineering-Course/LIP_JPPNet>)
+* [pytorch-ssim](<https://github.com/Po-Hsun-Su/pytorch-ssim>)
 * More references are cited in the project report.
