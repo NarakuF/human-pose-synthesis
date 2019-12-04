@@ -2,8 +2,8 @@
 This is a project for COMS 4995 Deep Learning. We propose a new task, which is text guided pose synthesis on large scale of human activities. We first analyze the state-of-the-art model for pose keypoints estimation, the power of human semantic parsing, and existing text guided image synthesis. Further, we proposed an approach that can solve our target task with 3 stages. We then talked about the potential improvement and drawbacks of our model.
 
 ## Contributors
-* [Guandong Liu](https://github.com/NarakuF)
 * [Yue Wan](https://github.com/yuewan2)
+* [Guandong Liu](https://github.com/NarakuF)
 
 ## Requirements
 Install all dependencies in `requrements.txt`.
