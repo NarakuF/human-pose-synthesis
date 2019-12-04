@@ -19,7 +19,7 @@ Install all dependencies in `requrements.txt`.
 * `train*`: training code for different neural networks.
 
 ## Testing
-Download our pretrained classifier, generators, and discriminators model from [google drive](<https://drive.google.com/drive/folders/1hT0OZFhEyrAF2SRYJjBsSojfxb9sQXX8?usp=sharing>) and put them inside the `./intermediate` folder. Run main.py for testing. It will allow you to enter a brief annotation (no longer than 15 words) and generate pose and semantic parsing.
+Download our pretrained classifier, generators, and discriminators model from [google drive](<https://drive.google.com/drive/folders/1hT0OZFhEyrAF2SRYJjBsSojfxb9sQXX8?usp=sharing>) and put them inside the `./intermediate` folder. Run `python3 test.py` for testing. It will allow you to enter a brief annotation (no longer than 15 words) and generate the corresponding pose and semantic parsing.
 
 ## References and Related Projects
 * [Unsupervised Person Image Generation with Semantic Parsing Transformation](<https://github.com/SijieSong/person_generation_spt>)
