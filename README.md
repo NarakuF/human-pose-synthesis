@@ -11,15 +11,15 @@ Install all dependencies in `requrements.txt`.
 [pytorch-ssim](<https://github.com/Po-Hsun-Su/pytorch-ssim>) should also be installed for cgan training.
 
 ## Contents
-* `data`: processed MPII csv data.
+* `data`: processed MPII data and data path csv.
 * `model`: implementation of various neural networks, including annotation classifier, and conditional GAN.
 * `utils`: some helper methods to process images and texts.
-* `main.py`: main code to run the whole pipeline.
+* `test.py`: test code to run the whole pipeline.
 * `pose_dataset.py`: customized dataset and dataloader using PyTorch.
 * `train*`: training code for different neural networks.
 
 ## Testing
-Download our pretrained classifier, generators, and discriminators model from [google drive](<https://drive.google.com/drive/folders/1hT0OZFhEyrAF2SRYJjBsSojfxb9sQXX8?usp=sharing>) and put them inside the `./intermediate` folder. Run `python3 test.py` for testing. It will allow you to enter a brief annotation (no longer than 15 words) and generate the corresponding pose and semantic parsing.
+Download our preprocessed data, pretrained classifier, generators, and discriminators model from [google drive](<https://drive.google.com/drive/folders/1hT0OZFhEyrAF2SRYJjBsSojfxb9sQXX8?usp=sharing>) and put them inside the `./intermediate` folder. Run `python3 test.py` for testing. It will allow you to enter a brief annotation (no longer than 15 words) and generate the corresponding pose and semantic parsing.
 
 ## References and Related Projects
 * [Unsupervised Person Image Generation with Semantic Parsing Transformation](<https://github.com/SijieSong/person_generation_spt>)
@@ -27,4 +27,6 @@ Download our pretrained classifier, generators, and discriminators model from [g
 * [Detectron2](<https://github.com/facebookresearch/detectron2>)
 * [LIP_JPPNet](<https://github.com/Engineering-Course/LIP_JPPNet>)
 * [pytorch-ssim](<https://github.com/Po-Hsun-Su/pytorch-ssim>)
+* [PyTorch-GAN](<https://github.com/eriklindernoren/PyTorch-GAN>)
+* [vae-torch](<https://github.com/ldeecke/vae-torch>)
 * More references are cited in the project report.
