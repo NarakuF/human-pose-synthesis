@@ -25,12 +25,9 @@ mydevice = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Load Model:
 print("Loading Model...")
-classifier = torch.load('./intermediate/classifier_200.pth')
-classifier.to(device = mydevice)
-netG_pose = torch.load('./intermediate/pose_netG_uni.pth')
-netG_pose.to(device = mydevice)
-netG_parsing = torch.load('./intermediate/parsing_netG_uni.pth')
-netG_parsing.to(device = mydevice)
+classifier = torch.load('./intermediate/classifier_200.pth', map_location = mydevice)
+netG_pose = torch.load('./intermediate/pose_netG_uni.pth', map_location = mydevice)
+netG_parsing = torch.load('./intermediate/parsing_netG_uni.pth', map_location = mydevice)
 
 with open('./intermediate/word2idx.pk', 'rb') as f:
     word2idx = pickle.load(f)
