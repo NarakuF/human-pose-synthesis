@@ -35,10 +35,9 @@ class ActivityClassifier(nn.Module):
         return self.main(encoded_x)
 
 
-def anno2padded(anno, dataset):
+def anno2padded(anno, word2idx, max_len=15):
     tokens = tokenizer(anno)
-    tokens = [dataset.word2idx.get(t, 0) for t in tokens]
-    max_len = dataset.padded_annotate.shape[0]
+    tokens = [word2idx.get(t, 0) for t in tokens]
     while len(tokens) < max_len:
         tokens.append(0)
     padded = torch.tensor([tokens], dtype=torch.long).cuda()
