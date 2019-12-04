@@ -114,7 +114,7 @@ if __name__ == "__main__":
     print(correct / len(dataset))'''
 
     s = 'golf'
-    s = anno2padded(s, dataset)
+    s = anno2padded(s, dataset.word2idx)
     with torch.no_grad():
         y = model(s)
     res = normalize_res(y)
