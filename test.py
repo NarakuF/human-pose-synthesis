@@ -42,7 +42,7 @@ while len(annotate.split(' ')) > 15:
 
 
 # Retrieving the potential cluster label based on pose distribution
-s = anno2padded(annotate, word2idx)
+s = anno2padded(annotate, word2idx, mydevice)
 with torch.no_grad():
     res = classifier(s)
 res = normalize_res(res)
