@@ -35,12 +35,12 @@ class ActivityClassifier(nn.Module):
         return self.main(encoded_x)
 
 
-def anno2padded(anno, word2idx, max_len=15):
+def anno2padded(anno, word2idx, mydevice, max_len=15):
     tokens = tokenizer(anno)
     tokens = [word2idx.get(t, 0) for t in tokens]
     while len(tokens) < max_len:
         tokens.append(0)
-    padded = torch.tensor([tokens], dtype=torch.long).cuda()
+    padded = torch.tensor([tokens], dtype=torch.long, device = mydevice)
     return padded
 
 
@@ -113,8 +113,10 @@ if __name__ == "__main__":
     print(correct)
     print(correct / len(dataset))'''
 
+    mydevice = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
     s = 'golf'
-    s = anno2padded(s, dataset.word2idx)
+    s = anno2padded(s, dataset.word2idx, mydevice)
     with torch.no_grad():
         y = model(s)
     res = normalize_res(y)
