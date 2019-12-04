@@ -8,6 +8,8 @@ This is a project for COMS 4995 Deep Learning. We propose a new task, which is t
 ## Requirements
 Install all dependencies in `requrements.txt`.
 
+pytorch-ssim(<https://github.com/Po-Hsun-Su/pytorch-ssim>) should also be cloned for cgan training.
+
 ## Contents
 * `data`: processed MPII csv data.
 * `model`: implementation of various neural networks, including annotation classifier, and conditional GAN.
