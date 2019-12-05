@@ -1,4 +1,4 @@
-# human-pose-synthesis
+# Human Pose Synthesis on Large Scale of Human Activity
 This is a project for COMS 4995 Deep Learning. We propose a new task, which is text guided pose synthesis on large scale of human activities. We first analyze the state-of-the-art model for pose keypoints estimation, the power of human semantic parsing, and existing text guided image synthesis. Further, we proposed an approach that can solve our target task with 3 stages. We then talked about the potential improvement and drawbacks of our model.
 
 ![Proposed Framework](architecture.png)
