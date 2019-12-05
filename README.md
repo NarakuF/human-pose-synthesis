@@ -12,7 +12,9 @@ Install all dependencies in `requrements.txt`.
 
 ## Contents
 * `data`: processed MPII data and data path csv.
+* `intermediate`: directory for preprocessed data and pretrained models.
 * `model`: implementation of various neural networks, including annotation classifier, and conditional GAN.
+* `output`: sample results for synthesized pose keypoints and semantic parsing.
 * `utils`: some helper methods to process images and texts.
 * `test.py`: test code to run the whole pipeline.
 * `pose_dataset.py`: customized dataset and dataloader using PyTorch.
