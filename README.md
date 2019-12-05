@@ -16,9 +16,10 @@ Install all dependencies in `requrements.txt`.
 * `model`: implementation of various neural networks, including annotation classifier, and conditional GAN.
 * `output`: sample results for synthesized pose keypoints and semantic parsing.
 * `utils`: some helper methods to process images and texts.
-* `test.py`: test code to run the whole pipeline.
+* `data_clustering.py`: k-means clustering algorithm for images.
 * `pose_dataset.py`: customized dataset and dataloader using PyTorch.
-* `train*`: training code for different neural networks.
+* `test.py`: test code to run the whole pipeline.
+* `train*.py`: training code for different neural networks.
 
 ## Testing
 Download our preprocessed data, pretrained classifier, generators, and discriminators model from [google drive](<https://drive.google.com/drive/folders/1hT0OZFhEyrAF2SRYJjBsSojfxb9sQXX8?usp=sharing>) and put them inside the `./intermediate` folder. Run `python3 test.py` for testing. It will allow you to enter a brief annotation (no longer than 15 words) and generate the corresponding pose and semantic parsing.
